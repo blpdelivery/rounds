@@ -1,0 +1,25 @@
+<rss version="2.0">
+  <channel>
+    <title>BLP Rounds</title>
+    <link>https://rounds.bermaguilocalpost.org</link>
+    <description>Media feed from Bermagui Local Post's deliveries.</description>
+    <language>en-au</language>
+    <copyright>All media published in BLP Rounds is released under Creative Commons Attribution-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-sa/4.0/). Attribute Bermagui Local Post and link to rounds.bermaguilocalpost.org.</copyright>
+    <managingEditor>bermaguilocalpost@gmail.com (Miro Jones)</managingEditor>
+    <webMaster>bermaguilocalpost@gmail.com (Miro Jones)</webMaster>
+    <category>Media</category>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+    <image>
+      <url>https://rounds.bermaguilocalpost.org/assets/metadata/rss-preview.png</url>
+      <title>BLP Rounds</title>
+      <link>https://rounds.bermaguilocalpost.org</link>
+    </image>
+    <item>
+      <title>BLP Rounds #n</title>
+      <link>https://rounds.bermaguilocalpost.org/#n</link>
+      <description>d</description>
+      <enclosure url="http://rounds.bermaguilocalpost.org/assets/media/n.ext" length="l" type="t" />
+      <pubDate>Sun, 19 May 2002 15:21:36 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
