@@ -23,12 +23,14 @@
   <entry>
     <title type="html">#16 &ndash; 2025-03-22</title>
     <id>https://rounds.bermaguilocalpost.org/#16</id>
+    <published>2025-03-22</published>
     <updated>2025-03-22</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>A crab spotted at night at the boat launching facility near Bridge Motors.</p>
       </div>
     </content>
-    <link rel
+    <link rel="enclosure" href="assets/media/16.jpeg" type="image/jpeg" />
+    <link rel="alternate" href="index.html#16" type="text/html" />
   </entry>
 </feed>
