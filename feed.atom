@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>BLP Rounds</title>
+  <subtitle>Media feed from Bermagui Local Post's deliveries</subtitle>
+  <updated>2025-03-23</updated>
+  <link href="index.html" rel="alternate" type="text/html" />
+  <id>https://rounds.bermaguilocalpost.org</id>
+  <icon>assets/metadata/icon.svg</icon>
+  <logo>assets/metadata/logo.svg</logo>
+  <category term="media" />
+  <rights type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      All media published in BLP Rounds is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer license">CC BY-SA 4.0 International</a>.
+    </div>
+  </rights>
+  <author>
+    <name>Miro Jones</name>
+    <email>pm@bermaguilocalpost.org</email>
+    <uri>https://miro.boats</uri>
+  </author>
+  <generator uri="generator">BLP Rounds entry generator</generator>
+
+  <entry>
+    <title type="html">#16 &ndash; 2025-03-22</title>
+    <id>https://rounds.bermaguilocalpost.org/#16</id>
+    <updated>2025-03-22</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>A crab spotted at night at the boat launching facility near Bridge Motors.</p>
+      </div>
+    </content>
+    <link rel
+  </entry>
+</feed>
