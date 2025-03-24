@@ -4,15 +4,22 @@ fetch("feed.atom")
   .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
   .then(data => {
     const entries = data.querySelectorAll("entry");
-    let html = ``;
+    let HTML = ``;
     entries.forEach(entry => {
-      html += `
+      let mediaHTML = ``;
+      entry.querySelectorAll("link[rel=enclosure]").forEach((enclosure) => {
+        let type = enclosure.getAttribute("type");
+        if (type.startsWith("image/")) {
+          mediaHTML += `<img src="${enclosure.getAttribute("href")}" loading="lazy">`;
+        } else if (type.startsWith("video/")) {
+          mediaHTML += `<video controls disablepictureinpicture loop="true" src="${enclosure.getAttribute("href")}"><a href="${enclosure.getAttribute("href")}" download>Download video</a></video>`
+        }
+      });
+      HTML += `
         <article>
-          <figure>
-            
-          </figure>
+          ${mediaHTML}
         </article>
       `;
     });
-    document.body.insertAdjacentHTML("beforeend", html);
+    document.querySelector("#feed").insertAdjacentHTML("afterbegin", html);
   });

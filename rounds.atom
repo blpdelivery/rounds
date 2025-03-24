@@ -1,3 +1,4 @@
+<?xml-stylesheet href="rounds.css"?>
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>BLP Rounds</title>
@@ -21,7 +22,7 @@
   <generator uri="generator">BLP Rounds entry generator</generator>
 
   <entry>
-    <title>#16 &ndash; 2025-03-22</title>
+    <title>#16</title>
     <id>https://rounds.bermaguilocalpost.org/#16</id>
     <published>2025-03-22</published>
     <updated>2025-03-22</updated>
