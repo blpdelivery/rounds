@@ -14,7 +14,7 @@
                     <img src="{@href}" />
                   </xsl:when>
                   <xsl:when text="starts-with(@type, 'video')">
-                    <video src="{@href}" controls="" disablepictureinpicture="" loop="true"><a href="{@href}" download="">Download video</a></video>
+                    <video src="{@href}" controls="true" disablepictureinpicture="true" loop="true"><a href="{@href}" download="">Download video</a></video>
                   </xsl:when>
                 </xsl:choose>
               </xsl:for-each>
