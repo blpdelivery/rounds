@@ -5,7 +5,7 @@
   <subtitle>Media feed from Bermagui Local Post's deliveries</subtitle>
   <updated>2025-03-23</updated>
   <link href="index.html" rel="alternate" type="text/html" />
-  <id>https://rounds.bermaguilocalpost.org</id>
+  <id>https://rounds.bermaguilocalpost.org/</id>
   <icon>assets/metadata/icon.svg</icon>
   <logo>assets/metadata/logo.svg</logo>
   <category term="media" />
