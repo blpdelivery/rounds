@@ -10,10 +10,10 @@
             <div>
               <xsl:for-each select="link[@rel='enclosure']">
                 <xsl:choose>
-                  <xsl:when text="starts-with(@type, 'image')">
+                  <xsl:when test="starts-with(@type, 'image')">
                     <img src="{@href}" />
                   </xsl:when>
-                  <xsl:when text="starts-with(@type, 'video')">
+                  <xsl:when test="starts-with(@type, 'video')">
                     <video src="{@href}" controls="true" disablepictureinpicture="true" loop="true"><a href="{@href}" download="">Download video</a></video>
                   </xsl:when>
                 </xsl:choose>
@@ -25,4 +25,3 @@
     </html>
   </xsl:template>
 </xsl:stylesheet>
-    
