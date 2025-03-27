@@ -7,18 +7,21 @@
           <article id="{title}">
             <h2><xsl:value-of select="title" /></h2>
             <xsl:value-of select="content" />
-            <div>
+            <figure>
               <xsl:for-each select="link[@rel='enclosure']">
                 <xsl:choose>
-                  <xsl:when test="starts-with(@type, 'image')">
+                  <xsl:when test="starts-with(@type, 'image/')">
                     <img src="{@href}" />
                   </xsl:when>
-                  <xsl:when test="starts-with(@type, 'video')">
-                    <video src="{@href}" controls="true" disablepictureinpicture="true" loop="true"><a href="{@href}" download="">Download video</a></video>
+                  <xsl:when test="starts-with(@type, 'video/')">
+                    <video src="{@href}" controls="true" disablepictureinpicture="true" loop="true">Unable to embed video. <a href="{@href}" download="">Download</a> or <a href="{@href}">open</a> video.</video>
                   </xsl:when>
+                  <xsl:fallback>
+                    <p>File type not recognised. <a href="{@href}" download="">Download</a> or <a href="{@href}">open</a> file.</p>
+                  </xsl:fallback>
                 </xsl:choose>
               </xsl:for-each>
-            </div>
+            </figure>
           </article>
         </xsl:for-each>
       </body>
