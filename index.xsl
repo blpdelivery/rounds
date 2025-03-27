@@ -6,7 +6,7 @@
         <xsl:for-each select="atom:feed/atom:entry">
           <article id="{title}">
             <h2><xsl:value-of select="atom:title" /></h2>
-            <xsl:value-of select="atom:content" />
+            <xsl:copy-of select="atom:content" />
             <figure>
               <xsl:for-each select="atom:link[@rel='enclosure']">
                 <xsl:choose>
