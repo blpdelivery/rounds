@@ -20,8 +20,8 @@
   <generator uri="generator">BLP Rounds entry generator</generator>
 
   <entry>
-    <title>16</title>
     <id>tag:rounds.bermaguilocalpost.org,2025-03-22:16</id>
+    <title>16</title>
     <published>2025-03-22</published>
     <updated>2025-03-22</updated>
     <content type="xhtml">
@@ -30,5 +30,6 @@
       </div>
     </content>
     <link rel="enclosure" href="assets/media/16.jpeg" type="image/jpeg" />
+    <link rel="alternate" href="index.html/#16" />
   </entry>
 </feed>
