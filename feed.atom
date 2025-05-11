@@ -26,7 +26,10 @@
     <updated>2025-03-22</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>A crab spotted at night at the boat launching facility near Bridge Motors.</p>
+        <figure>
+          <img src="assets/media/16.jpeg" />
+          <figcaption>A crab spotted at night at the boat launching facility near Bridge Motors.</figcaption>
+        </figure>
       </div>
     </content>
     <link rel="enclosure" href="assets/media/16.jpeg" type="image/jpeg" />
