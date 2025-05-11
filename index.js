@@ -28,6 +28,6 @@ document.getElementById("atom").addEventListener("click", async function() {
   try {
     await navigator.clipboard.writeText(text);
   } catch (error) {
-    console.error(error.message);
+    alert(error.message);
   }
 });
