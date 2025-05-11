@@ -3,8 +3,8 @@
   <title>BLP Rounds</title>
   <subtitle>Media feed from Bermagui Local Post's deliveries</subtitle>
   <updated>2025-03-23</updated>
-  <link href="index.html" rel="alternate" type="text/html" />
-  <link href="feed.atom" rel="self" type="application/atom+xml" />
+  <link href="https://rounds.bermaguilocalpost.org" rel="alternate" type="text/html" />
+  <link href="https://rounds.bermaguilocalpost.org/feed.atom" rel="self" type="application/atom+xml" />
   <id>tag:rounds.bermaguilocalpost.org,2025-05-10:Rounds</id>
   <category term="media" />
   <rights type="xhtml">
@@ -27,12 +27,12 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <figure>
-          <img src="assets/media/16.jpeg" />
+          <img src="https://rounds.bermaguilocalpost.org/assets/media/16.jpeg" />
           <figcaption>A crab spotted at night at the boat launching facility near Bridge Motors.</figcaption>
         </figure>
       </div>
     </content>
-    <link rel="enclosure" href="assets/media/16.jpeg" type="image/jpeg" />
-    <link rel="alternate" href="index.html/#16" />
+    <link rel="enclosure" href="https://rounds.bermaguilocalpost.org/assets/media/16.jpeg" type="image/jpeg" />
+    <link rel="alternate" href="https://rounds.bermaguilocalpost.org/#16" />
   </entry>
 </feed>
