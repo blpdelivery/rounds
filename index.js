@@ -12,7 +12,7 @@ fetch("feed.atom")
         if (type.startsWith("image/")) {
           mediaHTML += `<img src="${enclosure.getAttribute("href")}" loading="lazy">`;
         } else if (type.startsWith("video/")) {
-          mediaHTML += `<video controls disablepictureinpicture loop="true" src="${enclosure.getAttribute("href")}"><a href="${enclosure.getAttribute("href")}" download>Download video</a></video>`
+          mediaHTML += `<video controls disablepictureinpicture loop="true" src="${enclosure.getAttribute("href")}"><a href="${enclosure.getAttribute("href")}" download>Download video</a></video>`;
         }
       });
       HTML += `
@@ -21,5 +21,5 @@ fetch("feed.atom")
         </article>
       `;
     });
-    document.querySelector("#feed").insertAdjacentHTML("afterbegin", html);
+    document.querySelector("#feed").insertAdjacentHTML("afterbegin", HTML);
   });
