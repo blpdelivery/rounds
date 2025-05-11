@@ -5,21 +5,29 @@ fetch("feed.atom")
   .then(data => {
     const entries = data.querySelectorAll("entry");
     let HTML = ``;
-    entries.forEach(entry => {
+    for (const entry of entries) {
       let mediaHTML = ``;
-      entry.querySelectorAll("link[rel=enclosure]").forEach((enclosure) => {
+      for (const enclosure of entry.querySelectorAll("link[rel=enclosure]")) {
         let type = enclosure.getAttribute("type");
         if (type.startsWith("image/")) {
           mediaHTML += `<img src="${enclosure.getAttribute("href")}" loading="lazy">`;
         } else if (type.startsWith("video/")) {
           mediaHTML += `<video controls disablepictureinpicture loop="true" src="${enclosure.getAttribute("href")}"><a href="${enclosure.getAttribute("href")}" download>Download video</a></video>`;
         }
-      });
+      };
       HTML += `
         <article>
           ${mediaHTML}
         </article>
       `;
-    });
-    document.querySelector("#feed").insertAdjacentHTML("afterbegin", HTML);
+    };
+    document.getElementById("feed").insertAdjacentHTML("afterbegin", HTML);
   });
+
+document.getElementById("atom").addEventListener("click", async function() {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (error) {
+    console.error(error.message);
+  }
+});
