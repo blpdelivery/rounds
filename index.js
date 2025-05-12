@@ -1,3 +1,5 @@
+const dateFormat = new Intl.DateTimeFormat("en-AU", {dateStyle: "medium"})
+
 // atom parser adapted from: Coyier, C. (2020, February 11). How to Fetch and Parse RSS Feeds in JavaScript | CSS-Tricks. CSS-Tricks. https://css-tricks.com/how-to-fetch-and-parse-rss-feeds-in-javascript/
 fetch("feed.atom")
   .then(response => response.text())
@@ -6,8 +8,12 @@ fetch("feed.atom")
     const entries = data.querySelectorAll("entry");
     let HTML = ``;
     for (const entry of entries) {
+      let title = entry.querySelector("title").innerHTML;
+      let published = entry.querySelector("published").innerHTML;
       HTML += `
-        <article id="${entry.querySelector("title")}">
+        <article id="${title}">
+          <h2>#${title}</h2>
+          <p><time datetime="${published}">${dateFormat.format(new Date(published))}</time></p>
           ${entry.querySelector("content div").innerHTML}
         </article>
       `;
