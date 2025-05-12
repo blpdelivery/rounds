@@ -21,19 +21,6 @@ fetch("feed.atom")
     document.getElementById("feed").innerHTML = HTML;
   });
 
-alert("updated");
-
-document.getElementById("atom").addEventListener("click", () => {
-  navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
-    if (result.state === "granted" || result.state === "prompt") {
-      navigator.clipboard.writeText("https://rounds.bermaguilocalpost.org/feed.atom").then(
-        () => {
-          alert("Feed URL successfully copied to clipboard");
-        },
-        () => {
-          alert("Failed to copy feed URL to clipboard");
-        },
-      );
-    }
-  });
+document.getElementById("atom-open").addEventListener("click", () => {
+  document.getElementById("atom").show();
 });

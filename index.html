@@ -12,11 +12,20 @@
     <p>Media feed from Bermagui Local Post's deliveries.</p>
   </header>
   <main>
-    <button id="atom">
+    <button id="atom-open">
       <svg viewBox="0 0 16 16" width="16" height="16">
         <use href="assets/icons.svg#feed" />
       </svg>
     </button>
+    <dialog id="atom">
+      <form method="dialog">
+        <button>Close</button>
+      </form>
+      <h2>Feed</h2>
+      <p>Copy and paste this link into your preferred feed reader to get updated everytime there's a new Rounds post.</p>
+      <textarea id="atom-link" readonly>https://rounds.bermaguilocalpost.org/feed.atom</textarea>
+      <a href="https://rounds.bermaguilocalpost.org/feed.atom" target="_blank">Open link</a>
+    </dialog>
     <div id="feed" class="feed" role="feed"></div>
   </main>
   <footer>
