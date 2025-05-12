@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>BLP Rounds</title>
   <subtitle>Media feed from Bermagui Local Post's deliveries</subtitle>
-  <updated>2025-03-23</updated>
+  <updated>2025-05-12T10:17:00+10:00</updated>
   <link href="https://rounds.bermaguilocalpost.org" rel="alternate" type="text/html" />
   <link href="https://rounds.bermaguilocalpost.org/feed.atom" rel="self" type="application/atom+xml" />
   <id>tag:rounds.bermaguilocalpost.org,2025-05-10:Rounds</id>
@@ -22,8 +22,8 @@
   <entry>
     <id>tag:rounds.bermaguilocalpost.org,2025-03-22:16</id>
     <title>16</title>
-    <published>2025-03-22</published>
-    <updated>2025-03-22</updated>
+    <published>2025-03-22T12:00:00+10:00</published>
+    <updated>2025-03-22T12:00:00+10:00</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <figure>
@@ -37,8 +37,8 @@
   <entry>
     <id>tag:rounds.bermaguilocalpost.org,2025-05-10:17</id>
     <title>17</title>
-    <published>2025-05-10</published>
-    <updated>2025-05-10</updated>
+    <published>2025-05-10T12:00:00+10:00</published>
+    <updated>2025-05-12T10:17:00+10:00</updated>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <figure>

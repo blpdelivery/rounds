@@ -6,18 +6,9 @@ fetch("feed.atom")
     const entries = data.querySelectorAll("entry");
     let HTML = ``;
     for (const entry of entries) {
-      let mediaHTML = ``;
-      for (const enclosure of entry.querySelectorAll("link[rel=enclosure]")) {
-        let type = enclosure.getAttribute("type");
-        if (type.startsWith("image/")) {
-          mediaHTML += `<img src="${enclosure.getAttribute("href")}" loading="lazy">`;
-        } else if (type.startsWith("video/")) {
-          mediaHTML += `<video controls disablepictureinpicture loop="true" src="${enclosure.getAttribute("href")}"><a href="${enclosure.getAttribute("href")}" download>Download video</a></video>`;
-        }
-      };
       HTML += `
-        <article>
-          ${mediaHTML}
+        <article id="${entry.querySelector("title")}">
+          ${entry.querySelector("content div").innerHTML}
         </article>
       `;
     };
