@@ -32,7 +32,21 @@
         </figure>
       </div>
     </content>
-    <link rel="enclosure" href="https://rounds.bermaguilocalpost.org/assets/media/16.jpeg" type="image/jpeg" />
+    <link rel="alternate" href="https://rounds.bermaguilocalpost.org/#16" />
+  </entry>
+  <entry>
+    <id>tag:rounds.bermaguilocalpost.org,2025-05-10:17</id>
+    <title>17</title>
+    <published>2025-05-10</published>
+    <updated>2025-05-10</updated>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <figure>
+          <img src="https://rounds.bermaguilocalpost.org/assets/media/17-a.jpeg" />
+          <figcaption>Smoke from a planned burn near Rose Bay, photographed from Bermagui Bridge.</figcaption>
+        </figure>
+      </div>
+    </content>
     <link rel="alternate" href="https://rounds.bermaguilocalpost.org/#16" />
   </entry>
 </feed>
