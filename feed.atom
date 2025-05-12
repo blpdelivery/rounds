@@ -5,7 +5,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title }}</title>
   <subtitle>{{ site.tagline }}</subtitle>
-  <updated>2025-05-12T10:17:00+10:00</updated>
+  {{ assign updated_time = site.data.posts | last }}
+  <updated>{{ updated_time.updated | date_to_xmlschema }}</updated>
   <link href="{{ site.url }}" rel="alternate" type="text/html" />
   <link href="{{ page.url | absolute_url }}" rel="self" type="application/atom+xml" />
   <id>tag:rounds.bermaguilocalpost.org,2025-05-10:Rounds</id>
@@ -30,10 +31,15 @@
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           {% for media_item in post.media %}
-            {% assign media_type = media_item | split:'.' | last}
+            {% assign media_type = media_item | split:'.' | last %}
+            {% assign media_url = "assets/media" | append: post.number | append: media_item | absolute_url %}
             {% case media_type %}
               {% when "jpeg", "jpg", "png" %}
-                <img src="{{ "assets/media" | append: post.number | append: media_item | absolute_url }}">
+                <img src="{{ media_url }}">
+              {% else %}
+                <object data="{{ media_url }}">
+                  <embed src="{{ media_url }}">
+                </object>
             {% endcase %}
           {% endfor %}
           {{ post.description }}
