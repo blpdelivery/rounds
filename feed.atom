@@ -1,52 +1,44 @@
+---
+---
+
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>BLP Rounds</title>
-  <subtitle>Media feed from Bermagui Local Post's deliveries</subtitle>
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.tagline }}</subtitle>
   <updated>2025-05-12T10:17:00+10:00</updated>
-  <link href="https://rounds.bermaguilocalpost.org" rel="alternate" type="text/html" />
-  <link href="https://rounds.bermaguilocalpost.org/feed.atom" rel="self" type="application/atom+xml" />
+  <link href="{{ site.url }}" rel="alternate" type="text/html" />
+  <link href="{{ page.url | absolute_url }}" rel="self" type="application/atom+xml" />
   <id>tag:rounds.bermaguilocalpost.org,2025-05-10:Rounds</id>
   <category term="media" />
   <rights type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
-      All media published in BLP Rounds is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener noreferrer license">CC BY-SA 4.0 International</a>.
+      {{ site.copyright }}
     </div>
   </rights>
   <author>
-    <name>Miro Jones</name>
-    <email>pm@bermaguilocalpost.org</email>
-    <uri>https://miro.boats</uri>
+    <name>{{ site.publisher }}</name>
+    <uri>{{ site.publisher_website }}</uri>
   </author>
-  <generator uri="generator">BLP Rounds entry generator</generator>
+  <generator version="{{ jekyll.version }}">Jekyll</generator>
 
-  <entry>
-    <id>tag:rounds.bermaguilocalpost.org,2025-03-22:16</id>
-    <title>16</title>
-    <published>2025-03-22T12:00:00+10:00</published>
-    <updated>2025-03-22T12:00:00+10:00</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <figure>
-          <img src="https://rounds.bermaguilocalpost.org/assets/media/16.jpeg" />
-          <figcaption>A crab spotted at night at the boat launching facility near Bridge Motors.</figcaption>
-        </figure>
-      </div>
-    </content>
-    <link rel="alternate" href="https://rounds.bermaguilocalpost.org/#16" />
-  </entry>
-  <entry>
-    <id>tag:rounds.bermaguilocalpost.org,2025-05-10:17</id>
-    <title>17</title>
-    <published>2025-05-10T12:00:00+10:00</published>
-    <updated>2025-05-12T10:17:00+10:00</updated>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <figure>
-          <img src="https://rounds.bermaguilocalpost.org/assets/media/17.jpeg" />
-          <figcaption>Smoke from a planned burn near Rose Bay, photographed from Bermagui Bridge.</figcaption>
-        </figure>
-      </div>
-    </content>
-    <link rel="alternate" href="https://rounds.bermaguilocalpost.org/#16" />
-  </entry>
+  {% for post in site.data.posts %}
+    <entry>
+      <id>{{ post.id }}</id>
+      <title>{{ post.number }}</title>
+      <published>{{ post.published | date_to_xmlschema }}</published>
+      <updated>{{ post.updated | date_to_xmlschema }}</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          {% for media_item in post.media %}
+            {% assign media_type = media_item | split:'.' | last}
+            {% if media_type == "jpeg" %}
+              <img src="{{ "assets/media" | append: post.number | append: media_item | absolute_url }}">
+            {% endif %}
+          {% endfor %}
+          {{ post.description }}
+        </div>
+      </content>
+      <link rel="alternate" href="{{ site.url | append: "#" | append: post.number }}" />
+    </entry>
+  {% endfor %}
 </feed>
