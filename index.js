@@ -28,10 +28,10 @@ document.getElementById("atom").addEventListener("click", () => {
     if (result.state === "granted" || result.state === "prompt") {
       navigator.clipboard.writeText("https://rounds.bermaguilocalpost.org/feed.atom").then(
         () => {
-          alert("Feed URL successfully copied to clipboard")
+          alert("Feed URL successfully copied to clipboard");
         },
         () => {
-          alert("Failed to copy feed URL to clipboard")
+          alert("Failed to copy feed URL to clipboard");
         },
       );
     }
