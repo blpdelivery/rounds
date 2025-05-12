@@ -5,8 +5,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title }}</title>
   <subtitle>{{ site.tagline }}</subtitle>
-  {{ assign updated_time = site.data.posts | last }}
-  <updated>{{ updated_time.updated | date_to_xmlschema }}</updated>
+  {{ assign updated_date = site.data.posts | last }}
+  <updated>{{ updated_date.updated | date_to_xmlschema }}</updated>
   <link href="{{ site.url }}" rel="alternate" type="text/html" />
   <link href="{{ page.url | absolute_url }}" rel="self" type="application/atom+xml" />
   <id>tag:rounds.bermaguilocalpost.org,2025-05-10:Rounds</id>
