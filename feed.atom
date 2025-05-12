@@ -31,9 +31,10 @@
         <div xmlns="http://www.w3.org/1999/xhtml">
           {% for media_item in post.media %}
             {% assign media_type = media_item | split:'.' | last}
-            {% if media_type == "jpeg" %}
-              <img src="{{ "assets/media" | append: post.number | append: media_item | absolute_url }}">
-            {% endif %}
+            {% case media_type %}
+              {% when "jpeg", "jpg", "png" %}
+                <img src="{{ "assets/media" | append: post.number | append: media_item | absolute_url }}">
+            {% endcase %}
           {% endfor %}
           {{ post.description }}
         </div>
