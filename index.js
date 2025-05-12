@@ -10,15 +10,15 @@ fetch("feed.atom")
     for (const entry of entries) {
       let title = entry.querySelector("title").innerHTML;
       let published = entry.querySelector("published").innerHTML;
-      HTML += `
+      HTML = `
         <article id="${title}">
           <h2>#${title}</h2>
           <p><time datetime="${published}">${dateFormat.format(new Date(published))}</time></p>
           ${entry.querySelector("content div").innerHTML}
         </article>
-      `;
+      ` + HTML;
     };
-    document.getElementById("feed").insertAdjacentHTML("afterbegin", HTML);
+    document.getElementById("feed").innerHTML = HTML;
   });
 
 document.getElementById("atom").addEventListener("click", async function() {
