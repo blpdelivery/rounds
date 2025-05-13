@@ -44,7 +44,18 @@
       <textarea id="atom-link" readonly>https://rounds.bermaguilocalpost.org/feed.atom</textarea>
       <a href="https://rounds.bermaguilocalpost.org/feed.atom" target="_blank">Open link</a>
     </dialog>
-    <div id="feed" class="feed" role="feed"></div>
+    <div id="feed" class="feed" role="feed">
+      {% for post in site.data.posts %}
+        <article id="#{{ post.number }}">
+          {% for media_item in post.media %}
+            {% case post.media | split: "." | last %}
+              {% when "jpeg", "jpg", "png" %}
+                <img src="assets/media/{{ post.number }}{{ media-item }}">
+            {% endcase %}
+          {% endfor %}
+        </article>
+      {% endfor %}
+    </div>
   </main>
   <footer>
     <p id="copyright"></p>
