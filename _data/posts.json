@@ -29,7 +29,12 @@
     "number": 18,
     "published": "2025-05-12",
     "updated": "2025-05-12",
-    "media": [".jpeg"],
+    "media": [
+      {
+        "url": ".jpeg",
+        "type": "image/jpeg"
+      }
+    ],
     "description": "Tiny anemones in a rockpool at Horseshoe Beach.",
     "id": "tag:rounds.bermaguilocalpost.org,2025-05-12:18"
   },
@@ -37,7 +42,12 @@
     "number": 19,
     "published": "2025-05-13",
     "updated": "2025-05-13",
-    "media": [".jpeg"],
+    "media": [
+      {
+        "url": ".jpeg",
+        "type": "image/jpeg"
+      }
+    ],
     "description": "A calendula",
     "id": "tag:rounds.bermaguilocalpost.org,2025-05-13:19"
   }
