@@ -3,7 +3,12 @@
     "number": 16,
     "published": "2025-03-22",
     "updated": "2025-03-22",
-    "media": [".jpeg"],
+    "media": [
+      {
+        "url": ".jpeg",
+        "type": "image/jpeg"
+      }
+    ],
     "description": "A crab spotted at night at the boat launching facility near Bridge Motors.",
     "id": "tag:rounds.bermaguilocalpost.org,2025-03-22:16"
   },
@@ -11,7 +16,12 @@
     "number": 17,
     "published": "2025-05-10",
     "updated": "2025-05-10",
-    "media": [".jpeg"],
+    "media": [
+      {
+        "url": ".jpeg",
+        "type": "image/jpeg"
+      }
+    ],
     "description": "Smoke from a planned burn near Rose Bay, photographed from Bermagui Bridge.",
     "id": "tag:rounds.bermaguilocalpost.org,2025-05-10:17"
   },

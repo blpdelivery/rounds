@@ -31,8 +31,8 @@
     </button>
   </nav>
   <header>
-    <h1>Rounds</h1>
-    <p>Media feed from Bermagui Local Post's deliveries.</p>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.tagline }}</p>
   </header>
   <main>
     <dialog id="atom">
@@ -42,7 +42,7 @@
       <h2>Feed</h2>
       <p>Copy and paste this link into your preferred feed reader to get updated everytime there's a new Rounds post.</p>
       <textarea id="atom-link" readonly>https://rounds.bermaguilocalpost.org/feed.atom</textarea>
-      <a href="https://rounds.bermaguilocalpost.org/feed.atom" target="_blank">Open link</a>
+      <a href="feed.atom" target="_blank">Open link</a>
     </dialog>
     <div id="feed" class="feed" role="feed">
       {% for post in site.data.posts %}
@@ -58,7 +58,7 @@
     </div>
   </main>
   <footer>
-    <p id="copyright"></p>
+    <p>{{ site.copyright }}</p>
   </footer>
   <script src="index.js"></script>
 </body>
