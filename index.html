@@ -46,7 +46,7 @@
     </dialog>
     <div id="feed" class="feed" role="feed">
       {% for post in site.data.posts %}
-        <article id="#{{ post.number }}">
+        <figure id="#{{ post.number }}">
           {% for media_item in post.media %}
             {% assign media_type = media_item.type | split: "/" | first %}
             {% case media_type %}
@@ -54,7 +54,14 @@
                 <img src="assets/media/{{ post.number }}{{ media_item.url }}">
             {% endcase %}
           {% endfor %}
-        </article>
+          <figcaption>
+            <hgroup>
+              <h2>#{{ post.number }}</h2>
+              <p>{{ post.published }}</p>
+            </hgroup>
+            {{ post.description }}
+          </figcaption>
+        </figure>
       {% endfor %}
     </div>
   </main>
