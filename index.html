@@ -45,7 +45,7 @@
       <a href="feed.atom" target="_blank">Open link</a>
     </dialog>
     <div id="feed" class="feed" role="feed">
-      {% for post in site.data.posts %}
+      {% for post in site.data.posts reversed %}
         <figure id="#{{ post.number }}">
           {% for media_item in post.media %}
             {% assign media_type = media_item.type | split: "/" | first %}
