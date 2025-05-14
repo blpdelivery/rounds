@@ -48,7 +48,8 @@
       {% for post in site.data.posts %}
         <article id="#{{ post.number }}">
           {% for media_item in post.media %}
-            {% case media_item.type | split: "/" | first %}
+            {% assign media_type = media_item.type | split: "/" | first %}
+            {% case media_type %}
               {% when "image" %}
                 <img src="assets/media/{{ post.number }}{{ media-item.url }}">
             {% endcase %}
