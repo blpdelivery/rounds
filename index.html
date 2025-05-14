@@ -51,7 +51,7 @@
             {% assign media_type = media_item.type | split: "/" | first %}
             {% case media_type %}
               {% when "image" %}
-                <img src="assets/media/{{ post.number }}{{ media-item.url }}">
+                <img src="assets/media/{{ post.number }}{{ media_item.url }}">
             {% endcase %}
           {% endfor %}
         </article>
