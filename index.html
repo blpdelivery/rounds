@@ -47,7 +47,7 @@
     </dialog>
     <div id="feed" class="feed" role="feed">
       {% for post in site.data.posts reversed %}
-        <article>
+        <article id="{{ post.number }}">
           <hgroup>
             <h2><a href="#{{ post.number }}">#{{ post.number }}</a></h2>
             <p>{{ post.published }}</p>
