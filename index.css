@@ -7,6 +7,21 @@
     url("assets/fonts/Quicksand.ttf") format("truetype")
 }
 
+:root {
+  color-scheme: light;
+  --c-text: #000;
+  --c-bg: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --c-text: #fff;
+    --c-bg: #000;
+    /* working on dark color scheme. remember: use firefox style editor */
+  }
+}
+
 body {
   font-family: "Quicksand", ui-rounded, ui-sans-serif, sans-serif;
   margin: 2em;
@@ -42,4 +57,9 @@ nav button {
 header {
   text-align: center;
   margin: 5em;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--c-text);
 }
