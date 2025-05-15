@@ -4,7 +4,7 @@
     local("Quicksand"),
     url("assets/fonts/Quicksand.woff2") format("woff2"),
     url("assets/fonts/Quicksand.woff") format("woff"),
-    url("assets/fonts/Quicksand.ttf") format("truetype")
+    url("assets/fonts/Quicksand.ttf") format("truetype");
 }
 
 body {
