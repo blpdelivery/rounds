@@ -9,13 +9,20 @@
 
 body {
   font-family: "Quicksand", ui-rounded, ui-sans-serif, sans-serif;
+  margin: 2em;
 }
 
 nav {
   display: grid;
   grid-template-columns: 1fr auto auto;
+  grid-gap: 0.5em;
+}
+
+nav a {
+  justify-self: left;
 }
 
 header {
   text-align: center;
+  margin: 5em;
 }
