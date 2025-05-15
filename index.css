@@ -4,7 +4,7 @@
     local("Quicksand"),
     url("assets/fonts/Quicksand.woff2") format("woff2"),
     url("assets/fonts/Quicksand.woff") format("woff"),
-    url("assets/fonts/Quicksand.ttf") format("truetype");
+    url("assets/fonts/Quicksand.ttf") format("truetype")
 }
 
 body {
@@ -16,10 +16,27 @@ nav {
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-gap: 0.5em;
+  align-items: center;
+}
+
+nav a svg {
+  width: 2em;
+  height: 2em;
 }
 
 nav a {
   justify-self: left;
+  padding: 0;
+}
+
+nav button svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+nav button {
+  background: none;
+  border: none;
 }
 
 header {
