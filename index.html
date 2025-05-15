@@ -34,6 +34,7 @@
     <h1>{{ site.title }}</h1>
     <p>{{ site.tagline }}</p>
   </header>
+  <hr>
   <main>
     <dialog id="atom">
       <form method="dialog">
@@ -46,22 +47,26 @@
     </dialog>
     <div id="feed" class="feed" role="feed">
       {% for post in site.data.posts reversed %}
-        <figure id="#{{ post.number }}">
+        <article>
+          <hgroup>
+            <h2><a href="#{{ post.number }}">#{{ post.number }}</a></h2>
+            <p>{{ post.published }}</p>
+          </hgroup>
+          <div>{{ post.description }}</div>
           {% for media_item in post.media %}
             {% assign media_type = media_item.type | split: "/" | first %}
+            {% assign media_url = "assets/media/" | append: post.number | append: media_item.url %}
             {% case media_type %}
               {% when "image" %}
-                <img src="assets/media/{{ post.number }}{{ media_item.url }}">
+                <img src="{{ media_url }}">
+              {% else %}
+                <object src="{{ media_url }}">
+                  <embed src="{{ media_url }}">
+                </object>
             {% endcase %}
           {% endfor %}
-          <figcaption>
-            <hgroup>
-              <h2>#{{ post.number }}</h2>
-              <p>{{ post.published }}</p>
-            </hgroup>
-            {{ post.description }}
-          </figcaption>
-        </figure>
+        </article>
+        <hr>
       {% endfor %}
     </div>
   </main>
