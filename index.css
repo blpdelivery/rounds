@@ -9,20 +9,21 @@
 
 :root {
   color-scheme: light;
-  --c-text: #000;
+  --c-txt: #000;
   --c-bg: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --c-text: #fff;
+    --c-txt: #fff;
     --c-bg: #000;
-    /* working on dark color scheme. remember: use firefox style editor */
   }
 }
 
 body {
+  color: var(--c-txt);
+  background-color: var(--c-bg);
   font-family: "Quicksand", ui-rounded, ui-sans-serif, sans-serif;
   margin: 2em;
 }
@@ -61,5 +62,5 @@ header {
 
 hr {
   border: none;
-  border-bottom: 1px solid var(--c-text);
+  border-bottom: 1px solid var(--c-txt);
 }
