@@ -4,20 +4,21 @@
     local("Quicksand"),
     url("assets/fonts/Quicksand.woff2") format("woff2"),
     url("assets/fonts/Quicksand.woff") format("woff"),
-    url("assets/fonts/Quicksand.ttf") format("truetype")
+    url("assets/fonts/Quicksand.ttf") format("truetype");
 }
 
 :root {
   color-scheme: light;
-  --c-txt: #000;
-  --c-bg: #fff;
+  --c-txt: #222;
+  --c-bg: #ffe;
+  --c-acc: #f36e32;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
     --c-txt: #fff;
-    --c-bg: #000;
+    --c-bg: #222;
   }
 }
 
@@ -40,9 +41,9 @@ nav a svg {
   height: 2em;
 }
 
-nav a {
+nav .logo {
+  color: var(--c-acc);
   justify-self: left;
-  padding: 0;
 }
 
 nav button svg {
@@ -58,9 +59,4 @@ nav button {
 header {
   text-align: center;
   margin: 5em;
-}
-
-hr {
-  border: none;
-  border-bottom: 1px solid var(--c-txt);
 }
