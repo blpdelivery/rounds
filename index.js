@@ -18,6 +18,7 @@ document.getElementById("share-site").addEventListener("click", async () => {
       url: "https://rounds.bermaguilocalpost.org"
     });
   } catch (err) {
+    console.error("Share error: " + err);
     document.getElementById("share-fallback").show();
   }
 });
