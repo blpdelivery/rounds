@@ -98,3 +98,7 @@ footer {
 a, button {
   cursor: pointer;
 }
+
+svg {
+  overflow: visible;
+}
