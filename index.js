@@ -1,6 +1,14 @@
-document.getElementById("atom-open").addEventListener("click", () => {
-  document.getElementById("atom").show();
-});
+async function copyAtomURL() {
+  try {
+    await navigator.clipboard.writeText("https://rounds.bermaguilocalpost.org/feed.atom");
+    alert("Feed URL copied to clipboard. Paste into your preferred feed reader.");
+  } catch (err) {
+    alert("Failed to copy feed URL.");
+    console.error("copy to clipboard error: " + err);
+  }
+}
+
+document.getElementById("atom-open").addEventListener("click", copyAtomURL);
 
 const imgPreview = document.getElementById("img-preview"),
   imgPreviewClose = document.getElementById("img-preview-close"),
