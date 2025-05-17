@@ -37,6 +37,10 @@ body {
   }
 }
 
+a, button {
+  cursor: pointer;
+}
+
 nav {
   display: grid;
   grid-template-columns: 1fr auto auto;
@@ -93,12 +97,4 @@ header {
 
 footer {
   text-align: center;
-}
-
-a, button {
-  cursor: pointer;
-}
-
-svg {
-  overflow: visible;
 }
