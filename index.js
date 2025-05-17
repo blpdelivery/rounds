@@ -6,8 +6,13 @@ const imgPreview = document.getElementById("img-preview"),
   imgPreviewClose = document.getElementById("img-preview-close"),
   imgPreviewImg = document.getElementById("img-preview-img");
 
-imgPreview.addEventListener("click", () => imgPreview.close());
-imgPreviewClose.addEventListener("click", () => imgPreview.close());
+function closeImgPreview() {
+  imgPreview.close();
+  imgPreviewImg.src = "";
+}
+
+imgPreview.addEventListener("click", closeImgPreview);
+imgPreviewClose.addEventListener("click", closeImgPreview);
 
 for (const mediaItem of document.querySelectorAll("img.media-item")) {
   mediaItem.addEventListener("click", () => {
