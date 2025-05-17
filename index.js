@@ -10,6 +10,19 @@ async function copyAtomURL() {
 
 document.getElementById("atom-open").addEventListener("click", copyAtomURL);
 
+
+document.getElementById("share-site").addEventListener("click", async () => {
+  try {
+    await navigator.share({
+      title: "BLP Rounds",
+      url: "https://rounds.bermaguilocalpost.org"
+    });
+  } catch (err) {
+    document.getElementById("share-fallback").show();
+  }
+});
+
+
 const imgPreview = document.getElementById("img-preview"),
   imgPreviewClose = document.getElementById("img-preview-close"),
   imgPreviewImg = document.getElementById("img-preview-img");
