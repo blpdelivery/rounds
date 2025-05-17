@@ -41,6 +41,20 @@ a, button {
   cursor: pointer;
 }
 
+.icon {
+  color: inherit;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
 nav {
   display: grid;
   grid-template-columns: 1fr auto auto;
@@ -56,17 +70,6 @@ nav .logo svg {
 nav .logo {
   color: var(--c-acc);
   justify-self: left;
-}
-
-nav .action svg {
-  width: 1.5em;
-  height: 1.5em;
-}
-
-nav .action {
-  color: inherit;
-  background: none;
-  border: none;
 }
 
 header {
@@ -115,9 +118,18 @@ header {
 }
 
 .img-preview button {
+  color: #fff;
   position: fixed;
   top: 1em;
   right: 1em;
+  background-color: #333a;
+  width: 3em;
+  height: 3em;
+  border-radius: 3em;
+}
+
+.img-preview button:hover {
+  background-color: #222a;
 }
 
 footer {
