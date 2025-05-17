@@ -50,7 +50,7 @@
         <article id="{{ post.number }}">
           <hgroup>
             <h2><a href="#{{ post.number }}">#{{ post.number }}</a></h2>
-            <p>{{ post.published }}</p>
+            <time datetime="{{ post.published }}">{{ post.published }}</time>
           </hgroup>
           <div>{{ post.description }}</div>
           {% for media_item in post.media %}
