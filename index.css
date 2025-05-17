@@ -95,6 +95,31 @@ header {
   width: 100%;
 }
 
+.img-preview[open] {
+  border: none;
+  background-color: #000a;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-preview[open] img {
+  max-width: 100vw;
+  max-height: 100dvh;
+}
+
+.img-preview button {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+}
+
 footer {
   text-align: center;
 }
