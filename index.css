@@ -44,7 +44,7 @@ nav {
   align-items: center;
 }
 
-nav a svg {
+nav .logo svg {
   width: 2em;
   height: 2em;
 }
@@ -54,12 +54,13 @@ nav .logo {
   justify-self: left;
 }
 
-nav button svg {
+nav .action svg {
   width: 1.5em;
   height: 1.5em;
 }
 
-nav button {
+nav .action {
+  color: inherit;
   background: none;
   border: none;
 }
@@ -92,4 +93,8 @@ header {
 
 footer {
   text-align: center;
+}
+
+a, button {
+  cursor: pointer;
 }
