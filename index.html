@@ -46,7 +46,7 @@
         <a href="feed.atom" target="_blank">Open link</a>
       </dialog>
       <div id="feed" class="feed" role="feed">
-        {% for post in site.data.posts reversed %}
+        {%- for post in site.data.posts reversed -%}
           <article id="{{ post.number }}">
             <hgroup>
               <h2><a href="#{{ post.number }}">#{{ post.number }}</a></h2>
@@ -54,21 +54,21 @@
             </hgroup>
             <div>{{ post.description }}</div>
             <div class="media">
-              {% for media_item in post.media %}
-                {% assign media_type = media_item.type | split: "/" | first %}
-                {% assign media_url = "assets/media/" | append: post.number | append: media_item.url %}
-                {% case media_type %}
-                  {% when "image" %}
+              {%- for media_item in post.media -%}
+                {%- assign media_type = media_item.type | split: "/" | first -%}
+                {%- assign media_url = "assets/media/" | append: post.number | append: media_item.url -%}
+                {%- case media_type -%}
+                  {%- when "image" -%}
                     <img src="{{ media_url }}" class="media-item">
-                  {% else %}
+                  {%- else -%}
                     <object src="{{ media_url }}" class="media-item">
                       <embed src="{{ media_url }}">
                     </object>
-                {% endcase %}
-              {% endfor %}
+                {%- endcase -%}
+              {%- endfor -%}
             </div>
           </article>
-        {% endfor %}
+        {%- endfor -%}
       </div>
     </main>
     <footer>
