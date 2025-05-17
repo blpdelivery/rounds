@@ -18,13 +18,13 @@
           <use href="assets/icons.svg#logo"/>
         </svg>
       </a>
-      <button id="atom-open" class="action atom-open">
+      <button id="atom-open" class="icon action atom-open">
         <svg viewBox="0 0 16 16" width="16" height="16" role="img">
           <title>Feed</title>
           <use href="assets/icons.svg#feed"/>
         </svg>
       </button>
-      <button id="share" class="action share">
+      <button id="share" class="icon action share">
         <svg viewBox="0 0 16 16" width="16" height="16" role="img">
           <title>Share this site</title>
           <use href="assets/icons.svg#share"/>
@@ -38,7 +38,12 @@
     <main>
       <dialog id="atom" class="atom">
         <form method="dialog">
-          <button>Close</button>
+          <button class="icon">
+            <svg viewBox="0 0 16 16" width="16" height="16" role="img">
+              <title>Close</title>
+              <use href="assets/icons.svg#close"/>
+            </svg>
+          </button>
         </form>
         <h2>Feed</h2>
         <p>Copy and paste this link into your preferred feed reader to get updated everytime there's a new Rounds post.</p>
@@ -71,7 +76,7 @@
         {%- endfor -%}
       </div>
       <dialog id="img-preview" class="img-preview">
-        <button id="img-preview-close">
+        <button id="img-preview-close" class="icon">
           <svg viewBox="0 0 16 16" width="16" height="16" role="img">
             <title>Close</title>
             <use href="assets/icons.svg#close"/>
