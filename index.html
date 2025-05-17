@@ -2,76 +2,78 @@
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="alternate" href="feed.atom" type="application/atom+xml">
-  <link rel="stylesheet" href="index.css">
-  <title>{{ site.title }}</title>
-</head>
-<body>
-  <nav>
-    <a href="https://www.bermaguilocalpost.org" target="_blank" rel="noopener noreferrer" class="logo">
-      <svg viewBox="0 0 16 16" width="16" height="16" role="img">
-        <title>Back to home</title>
-        <use href="assets/icons.svg#logo"/>
-      </svg>
-    </a>
-    <button id="atom-open" class="action atom-open">
-      <svg viewBox="0 0 16 16" width="16" height="16" role="img">
-        <title>Feed</title>
-        <use href="assets/icons.svg#feed"/>
-      </svg>
-    </button>
-    <button id="share" class="action share">
-      <svg viewBox="0 0 16 16" width="16" height="16" role="img">
-        <title>Share this site</title>
-        <use href="assets/icons.svg#share"/>
-      </svg>
-    </button>
-  </nav>
-  <header>
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.tagline }}</p>
-  </header>
-  <main>
-    <dialog id="atom" class="atom">
-      <form method="dialog">
-        <button>Close</button>
-      </form>
-      <h2>Feed</h2>
-      <p>Copy and paste this link into your preferred feed reader to get updated everytime there's a new Rounds post.</p>
-      <textarea id="atom-link" readonly>https://rounds.bermaguilocalpost.org/feed.atom</textarea>
-      <a href="feed.atom" target="_blank">Open link</a>
-    </dialog>
-    <div id="feed" class="feed" role="feed">
-      {% for post in site.data.posts reversed %}
-        <article id="{{ post.number }}">
-          <hgroup>
-            <h2><a href="#{{ post.number }}">#{{ post.number }}</a></h2>
-            <time datetime="{{ post.published }}">{{ post.published }}</time>
-          </hgroup>
-          <div>{{ post.description }}</div>
-          {% for media_item in post.media %}
-            {% assign media_type = media_item.type | split: "/" | first %}
-            {% assign media_url = "assets/media/" | append: post.number | append: media_item.url %}
-            {% case media_type %}
-              {% when "image" %}
-                <img src="{{ media_url }}" class="media-item">
-              {% else %}
-                <object src="{{ media_url }}" class="media-item">
-                  <embed src="{{ media_url }}">
-                </object>
-            {% endcase %}
-          {% endfor %}
-        </article>
-      {% endfor %}
-    </div>
-  </main>
-  <footer>
-    <p>{{ site.copyright }}</p>
-  </footer>
-  <script src="index.js"></script>
-</body>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" href="feed.atom" type="application/atom+xml">
+    <link rel="stylesheet" href="index.css">
+    <title>{{ site.title }}</title>
+  </head>
+  <body>
+    <nav>
+      <a href="https://www.bermaguilocalpost.org" target="_blank" rel="noopener noreferrer" class="logo">
+        <svg viewBox="0 0 16 16" width="16" height="16" role="img">
+          <title>Back to home</title>
+          <use href="assets/icons.svg#logo"/>
+        </svg>
+      </a>
+      <button id="atom-open" class="action atom-open">
+        <svg viewBox="0 0 16 16" width="16" height="16" role="img">
+          <title>Feed</title>
+          <use href="assets/icons.svg#feed"/>
+        </svg>
+      </button>
+      <button id="share" class="action share">
+        <svg viewBox="0 0 16 16" width="16" height="16" role="img">
+          <title>Share this site</title>
+          <use href="assets/icons.svg#share"/>
+        </svg>
+      </button>
+    </nav>
+    <header>
+      <h1>{{ site.title }}</h1>
+      <p>{{ site.tagline }}</p>
+    </header>
+    <main>
+      <dialog id="atom" class="atom">
+        <form method="dialog">
+          <button>Close</button>
+        </form>
+        <h2>Feed</h2>
+        <p>Copy and paste this link into your preferred feed reader to get updated everytime there's a new Rounds post.</p>
+        <textarea id="atom-link" readonly>https://rounds.bermaguilocalpost.org/feed.atom</textarea>
+        <a href="feed.atom" target="_blank">Open link</a>
+      </dialog>
+      <div id="feed" class="feed" role="feed">
+        {% for post in site.data.posts reversed %}
+          <article id="{{ post.number }}">
+            <hgroup>
+              <h2><a href="#{{ post.number }}">#{{ post.number }}</a></h2>
+              <time datetime="{{ post.published }}">{{ post.published }}</time>
+            </hgroup>
+            <div>{{ post.description }}</div>
+            <div class="media">
+              {% for media_item in post.media %}
+                {% assign media_type = media_item.type | split: "/" | first %}
+                {% assign media_url = "assets/media/" | append: post.number | append: media_item.url %}
+                {% case media_type %}
+                  {% when "image" %}
+                    <img src="{{ media_url }}" class="media-item">
+                  {% else %}
+                    <object src="{{ media_url }}" class="media-item">
+                      <embed src="{{ media_url }}">
+                    </object>
+                {% endcase %}
+              {% endfor %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </main>
+    <footer>
+      <p>{{ site.copyright }}</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
 </html>
