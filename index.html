@@ -60,7 +60,7 @@
                 {%- assign media_url = "assets/media/" | append: post.number | append: media_item.url -%}
                 {%- case media_type -%}
                   {%- when "image" -%}
-                    <img src="{{ media_url }}" class="media-item">
+                    <img src="{{ media_url }}" class="media-item" loading="lazy">
                   {%- else -%}
                     <object src="{{ media_url }}" class="media-item">
                       <embed src="{{ media_url }}">
