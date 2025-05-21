@@ -24,26 +24,10 @@
           <use href="assets/icons.svg#feed"/>
         </svg>
       </button>
-      <button id="share-site" class="icon action">
-        <svg viewBox="0 0 16 16" width="16" height="16" role="img">
-          <title>Share this site</title>
-          <use href="assets/icons.svg#share"/>
-        </svg>
-      </button>
-      <dialog id="share-fallback" class="share-fallback">
-        <h2>Share this site</h2>
-        <form method="dialog"><button>Close</button></form>
-        <p>Share via:</p>
-        <ul>
-          <li><a href="mailto:?subject=BLP%20Rounds&body=https%3A%2F%2Frounds.bermaguilocalpost.org">Email</a></li>
-          <li><a href="https://substack.com/home?action=compose&message=%40blpdelivery%20Rounds%0Ahttps%3A%2F%2Frounds.bermaguilocalpost.org">Substack</a></li>
-        </ul>
-        <p>Link:<br>https://rounds.bermaguilocalpost.org</p>
-      </dialog>
     </nav>
     <header>
       <h1>{{ site.title }}</h1>
-      <p>{{ site.tagline }}</p>
+      <p>{{ site.description }}</p>
     </header>
     <main>
       <div id="feed" class="feed" role="feed">
