@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="en-AU">
   <head>
+    <meta name="description" content="{{ site.description }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="alternate" href="feed.atom" type="application/atom+xml">
@@ -45,8 +46,12 @@
                 {%- case media_type -%}
                   {%- when "image" -%}
                     <img src="{{ media_url }}" class="media-item" loading="lazy">
+                  {%- when "video" -%}
+                    <video src="{{ media_url }}" controls controlslist="nodownload" loop></video>
+                  {%- when "audio" -%}
+                    <audio src="{{ media_url }}" controls controlslist="nodownload" loop></audio>
                   {%- else -%}
-                    <object src="{{ media_url }}" class="media-item">
+                    <object data="{{ media_url }}" class="media-item">
                       <embed src="{{ media_url }}">
                     </object>
                 {%- endcase -%}
