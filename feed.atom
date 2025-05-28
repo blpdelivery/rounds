@@ -5,7 +5,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title }}</title>
   <subtitle>{{ site.description }}</subtitle>
-  {{ assign updated_date = site.data.posts | last }}
+  {% assign updated_date = site.data.posts | last %}
   <updated>{{ updated_date.updated | date_to_xmlschema }}</updated>
   <link href="{{ site.url }}" rel="alternate" type="text/html" />
   <link href="{{ page.url | absolute_url }}" rel="self" type="application/atom+xml" />
