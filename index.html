@@ -36,7 +36,7 @@ layout: html_minifier
         {%- for post in site.data.posts reversed -%}
           <article id="{{ post.number }}">
             <hgroup>
-              <h2><a href="#{{ post.number }}">#{{ post.number }}</a></h2>
+              <h2><a href="#{{ post.number }}" rel="bookmark">#{{ post.number }}</a></h2>
               <time datetime="{{ post.published }}">{{ post.published }}</time>
             </hgroup>
             <div>{{ post.description }}</div>
