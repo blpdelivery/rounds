@@ -1,5 +1,5 @@
 ---
-layout: js-minifier
+layout: js_minifier
 ---
 
 const atomURL = "https://rounds.bermaguilocalpost.org/feed.atom";
