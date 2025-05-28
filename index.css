@@ -14,11 +14,17 @@
   --c-acc: #f36e32;
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
     --c-txt: #fff;
     --c-bg: #222;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    scroll-behaviour: smooth;
   }
 }
 
