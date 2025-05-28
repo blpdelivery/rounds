@@ -46,7 +46,7 @@ layout: html_minifier
                 {%- assign media_url = "assets/media/" | append: post.number | append: media_item.url -%}
                 {%- case media_type -%}
                   {%- when "image" -%}
-                    <img src="{{ media_url }}" loading="lazy" decoding="asynchronous" class="media-item">
+                    <img src="{{ media_url }}" loading="lazy" decoding="asynchronous" class="media-item" onerror="this.src=`data:text/svg+xml,<svg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2030%2020'><path%20d%3D'M0%200h30v20H0'%20fill%3D'%23ddd'%2F><text%20x%3D'50%25'%20y%3D'50%25'%20dominant-baseline%3D'middle'%20text-anchor%3D'middle'%20font-size%3D'2'%20fill%3D'%23444'>Image%20could%20not%20be%20found<%2Ftext><%2Fsvg>`">
                   {%- when "video" -%}
                     <video src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></video>
                   {%- when "audio" -%}
