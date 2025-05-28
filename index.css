@@ -22,12 +22,6 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  body {
-    scroll-behaviour: smooth;
-  }
-}
-
 body {
   color: var(--c-txt);
   background-color: var(--c-bg);
@@ -35,6 +29,12 @@ body {
   font-family: "Quicksand", ui-rounded, ui-sans-serif, sans-serif;
   margin: 2em auto;
   padding: 0 2em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    scroll-behaviour: smooth;
+  }
 }
 
 @media screen and (max-width: 300px) {
