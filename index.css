@@ -33,7 +33,7 @@ body {
 
 @media (prefers-reduced-motion: no-preference) {
   body {
-    scroll-behaviour: smooth;
+    scroll-behavior: smooth;
   }
 }
 
