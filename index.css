@@ -104,6 +104,10 @@ header {
   width: 100%;
 }
 
+.feed img.media-item {
+  cursor: zoom-in;
+}
+
 .img-preview[open] {
   border: none;
   background-color: #000a;
@@ -119,6 +123,7 @@ header {
 }
 
 .img-preview img {
+  cursor: zoom-out;
   max-width: 100vw;
   max-height: 100dvh;
 }
