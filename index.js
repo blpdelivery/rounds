@@ -12,13 +12,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+const atomURL = "https://rounds.bermaguilocalpost.org/feed.atom"
 
 async function copyAtomURL() {
   try {
-    await navigator.clipboard.writeText("https://rounds.bermaguilocalpost.org/feed.atom");
+    await navigator.clipboard.writeText(atomURL);
     alert("Feed URL copied to clipboard. Paste into your preferred feed reader.");
   } catch (err) {
-    alert("Failed to copy feed URL.");
+    open(atomURL, "_blank");
     console.error("copy to clipboard error: " + err);
   }
 }
