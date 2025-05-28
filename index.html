@@ -46,11 +46,11 @@ layout: html_minifier
                 {%- assign media_url = "assets/media/" | append: post.number | append: media_item.url -%}
                 {%- case media_type -%}
                   {%- when "image" -%}
-                    <img src="{{ media_url }}" class="media-item" loading="lazy">
+                    <img src="{{ media_url }}" loading="lazy" decoding="asynchronous" class="media-item">
                   {%- when "video" -%}
-                    <video src="{{ media_url }}" controls controlslist="nodownload" loop></video>
+                    <video src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></video>
                   {%- when "audio" -%}
-                    <audio src="{{ media_url }}" controls controlslist="nodownload" loop></audio>
+                    <audio src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></audio>
                   {%- else -%}
                     <object data="{{ media_url }}" class="media-item">
                       <embed src="{{ media_url }}">
