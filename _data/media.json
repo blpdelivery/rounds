@@ -1,0 +1,10 @@
+---
+---
+
+[
+  {%- for post in site.data.posts -%}
+  {
+    
+  }
+  {%- endfor -%}
+]
