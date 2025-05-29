@@ -1,1 +1,16 @@
-
+{%- for media_item in layout.media -%}
+  {%- assign media_type = media_item.type | split: "/" | first -%}
+  {%- assign media_url = "assets/media/" | append: post.number | append: media_item.url -%}
+  {%- case media_type -%}
+    {%- when "image" -%}
+      <img src="{{ media_url }}" loading="lazy" class="media-item" onerror="this.src='assets/ui/broken-img.svg'">
+    {%- when "video" -%}
+      <video src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></video>
+    {%- when "audio" -%}
+      <audio src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></audio>
+    {%- else -%}
+      <object data="{{ media_url }}" class="media-item">
+        <embed src="{{ media_url }}">
+      </object>
+  {%- endcase -%}
+{%- endfor -%}
