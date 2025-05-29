@@ -1,4 +1,4 @@
-{%- for media_item in layout.media -%}
+{%- for media_item in layout.post.media -%}
   {%- assign media_type = media_item.type | split: "/" | first -%}
   {%- assign media_url = "assets/media/" | append: post.number | append: media_item.url -%}
   {%- case media_type -%}
