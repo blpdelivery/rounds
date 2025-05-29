@@ -3,8 +3,6 @@
 
 [
   {%- for post in site.data.posts -%}
-  {
-    
-  }
+  {{ post }}
   {%- endfor -%}
 ]
