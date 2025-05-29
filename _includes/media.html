@@ -1,3 +1,7 @@
+{%- comment -%}
+To use this include, add {%- include media post=post -%} in the site.data.posts for loop.
+{%- endcomment -%}
+
 {%- for media_item in layout.post.media -%}
   {%- assign media_type = media_item.type | split: "/" | first -%}
   {%- assign media_url = "assets/media/" | append: post.number | append: media_item.url -%}
