@@ -41,7 +41,7 @@ layout: html_minifier
             </hgroup>
             <div>{{ post.description }}</div>
             <div class="media">
-              {%- include media post=post -%}
+              {%- include media.html post=post -%}
             </div>
           </article>
         {%- endfor -%}
