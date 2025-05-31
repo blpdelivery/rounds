@@ -8,8 +8,15 @@ layout: html_minifier
     <meta name="description" content="{{ site.description }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="alternate" href="feed.atom" type="application/atom+xml">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="/media/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/media/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/media/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/media/favicons/site.webmanifest" />
+    
     <title>{{ site.title }}</title>
   </head>
   <body>
@@ -51,7 +58,7 @@ layout: html_minifier
         <button id="img-preview-close" class="icon">
           <svg viewBox="0 0 16 16" width="16" height="16" role="img">
             <title>Close</title>
-            <use href="assets/ui/icons.svg#close"/>
+            <use href="assets/favicons/icons.svg#close"/>
           </svg>
         </button>
         <img id="img-preview-img">
