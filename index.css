@@ -122,6 +122,10 @@ header {
   align-items: center;
 }
 
+body:has(.img-preview[open]) {
+  overflow: hidden;
+}
+
 .img-preview img {
   cursor: zoom-out;
   max-width: 100vw;
