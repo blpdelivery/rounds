@@ -7,7 +7,7 @@ To use this include, add {%- include media.html post=post -%} in the site.data.p
   {%- assign media_url = "assets/media/" | append: post.number | append: media_item.url -%}
   {%- case media_type -%}
     {%- when "image" -%}
-      <img src="{{ media_url }}" loading="lazy" class="media-item" onerror="this.src='assets/ui/broken-img.svg'">
+      <img src="{{ media_url }}" loading="lazy" class="media-item" onerror="this.src='assets/ui/broken-img.svg'"/>
     {%- when "video" -%}
       <video src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></video>
     {%- when "audio" -%}
