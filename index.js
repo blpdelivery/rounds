@@ -2,7 +2,7 @@
 layout: js_minifier
 ---
 
-const atomURL = "https://rounds.bermaguilocalpost.org/feed.atom";
+const atomURL = "https://rounds.bermaguilocalpost.org/feed.xml";
 
 async function copyAtomURL() {
   try {
