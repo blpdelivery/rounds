@@ -1,10 +1,14 @@
 {%- comment -%}
 To use this include, add {%- include media.html post=post -%} in the site.data.posts for loop.
+To make media urls absolute, use absolute=true attribute.
 {%- endcomment -%}
 
 {%- for media_item in include.post.media -%}
   {%- assign media_type = media_item.type | split: "/" | first -%}
   {%- assign media_url = "assets/media/" | append: post.number | append: media_item.url -%}
+  {%- if absolute -%}
+    {%- assign media_url = relative_media_url | absolute -%}
+  {%- endif -%}
   {%- case media_type -%}
     {%- when "image" -%}
       <img src="{{ media_url }}" loading="lazy" decoding="async" class="media-item" onerror="this.src='assets/ui/broken-img.svg'"/>
@@ -13,8 +17,6 @@ To use this include, add {%- include media.html post=post -%} in the site.data.p
     {%- when "audio" -%}
       <audio src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></audio>
     {%- else -%}
-      <object data="{{ media_url }}" class="media-item">
-        <embed src="{{ media_url }}">
-      </object>
+      <iframe src="{{ media_url }}" class="media-item"></iframe>
   {%- endcase -%}
 {%- endfor -%}
