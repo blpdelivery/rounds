@@ -22,7 +22,7 @@
   </author>
   <generator version="{{ jekyll.version }}" uri="https://jekyllrb.com/">Jekyll</generator>
 
-  {% for post in site.data.posts %}
+  {% for post in site.data.posts reversed %}
     <entry>
       <id>{{ post.id }}</id>
       <title>{{ post.number }}T00:00:00Z</title>
@@ -30,7 +30,7 @@
       <updated>{{ post.updated }}</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          {%- include media.html post=post -%}
+          {%- include media.html post=post absolute=true -%}
           {{- post.description -}}
         </div>
       </content>
