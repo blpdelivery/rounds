@@ -25,9 +25,9 @@
   {% for post in site.data.posts reversed %}
     <entry>
       <id>{{ post.id }}</id>
-      <title>{{ post.number }}T00:00:00Z</title>
+      <title>#{{ post.number }}</title>
       <published>{{ post.published }}T00:00:00Z</published>
-      <updated>{{ post.updated }}</updated>
+      <updated>{{ post.updated }}T00:00:00Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
           {%- include media.html post=post absolute=true -%}
