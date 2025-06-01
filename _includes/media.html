@@ -5,9 +5,11 @@ To make media urls absolute, use absolute=true attribute.
 
 {%- for media_item in include.post.media -%}
   {%- assign media_type = media_item.type | split: "/" | first -%}
-  {%- assign media_url = "assets/media/" | append: post.number | append: media_item.url -%}
+  {%- assign relative_media_url = "assets/media/" | append: post.number | append: media_item.url -%}
   {%- if absolute -%}
-    {%- assign media_url = relative_media_url | absolute -%}
+    {%- assign media_url = relative_media_url | absolute_url -%}
+    {%- else -%}
+    {%- assign media_url = relative_media_url -%}
   {%- endif -%}
   {%- case media_type -%}
     {%- when "image" -%}
