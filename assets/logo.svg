@@ -1,0 +1,39 @@
+<svg viewBox="-8 -8 16 16" fill="none" stroke="#000" stroke-width="0.5">
+  <ellipse id="ellipse"/>
+  <g id="copies"></g>
+  <script>
+    // <![CDATA[
+    const ellipse = document.getElementById("ellipse"),
+      copies = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    
+    function randomNumber(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+    
+    function randomInt(min, max) {
+      const minCeiled = Math.ceil(min);
+      return Math.floor(Math.random() * (Math.floor(max) - minCeiled + 1) + minCeiled);
+    }
+    
+    let rx = randomNumber(1, 4),
+      ry = randomNumber(1, 4),
+      cy = -randomNumber(2, 4 - ry);
+      
+    ellipse.setAttribute("rx", rx);
+    ellipse.setAttribute("ry", ry);
+    ellipse.setAttribute("cy", cy);
+    
+    const count = randomInt(5, 7);
+    
+    for (let iteration = 1; iteration < count; iteration++) {
+      const copy = ellipse.cloneNode();
+      copy.setAttribute("id", "");
+      copy.setAttribute("transform", `rotate(${360 / count * iteration})`);
+      copies.appendChild(copy);
+    }
+    
+     document.getElementById("copies").appendChild(copies);
+    }
+    // ]]>
+  </script>
+</svg>
