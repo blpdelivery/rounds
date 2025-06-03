@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-9 -9 18 18">
-  <g id="g">
-    <circle id="c" r="5" cy="3" fill="#f36e3250"/>
-    <use href="#c" transform="rotate(60)"/>
-    <use href="#c" transform="rotate(120)"/>
-  </g>
-  <use href="#g" transform="rotate(180)"/>
-</svg>
