@@ -29,10 +29,12 @@
       <published>{{ post.published }}T00:00:00Z</published>
       <updated>{{ post.updated }}T00:00:00Z</updated>
       <content type="xhtml">
+        <![CDATA[
         <div xmlns="http://www.w3.org/1999/xhtml">
           {%- include media.html post=post absolute=true -%}
           {{- post.description -}}
         </div>
+        ]]>
       </content>
       <link rel="alternate" href="{{ site.url | append: "#" | append: post.number }}" />
     </entry>
