@@ -17,6 +17,7 @@ To make media urls absolute, use absolute=true attribute.
     {%- when "video" -%}
       <video src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></video>
     {%- when "audio" -%}
+      {%- comment %} TODO: add custom media controls: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/Multimedia {% endcomment -%}
       <audio src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></audio>
     {%- else -%}
       <iframe src="{{ media_url }}" class="media-item"></iframe>
