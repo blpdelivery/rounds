@@ -58,7 +58,6 @@ a, button {
 
 .icon svg {
   width: 2em;
-  height: 2em;
 }
 
 nav {
@@ -69,8 +68,7 @@ nav {
 }
 
 nav .logo svg {
-  width: 3em;
-  height: 3em;
+  width: 4em;
 }
 
 nav .logo {
