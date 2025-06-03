@@ -74,6 +74,7 @@ nav .logo svg {
 }
 
 nav .logo {
+  color: var(--c-acc);
   justify-self: left;
 }
 
