@@ -68,7 +68,7 @@ nav {
   align-items: center;
 }
 
-nav .logo img {
+nav .logo svg {
   width: 3em;
   height: 3em;
 }
