@@ -12,6 +12,8 @@
   --c-txt: #222;
   --c-bg: #ffe;
   --c-acc: #f36e32;
+  --logo-opacity: 0.3;
+  --logo-color: var(--c-acc);
 }
 
 @media screen and (prefers-color-scheme: dark) {
