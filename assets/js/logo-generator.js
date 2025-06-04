@@ -21,7 +21,7 @@ ellipse.setAttribute("fill", "var(--logo-color)");
 ellipse.setAttribute("opacity", "var(--logo-opacity)");
 ellipse.setAttribute("id", "ellipse");
 
-let count = randomInt(5, 7),
+var count = randomInt(5, 7),
   rx = randomNumber(3, 6),
   ry = randomNumber(3, 8),
   cy = -(8 - ry);
