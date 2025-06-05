@@ -4,7 +4,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title }}</title>
-  <subtitle>{{ site.description }}</subtitle>
+  <subtitle type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      {{ site.description }}
+    </div>
+  </subtitle>
   {% assign most_recent_post = site.data.posts | last %}
   <updated>{{ most_recent_post.updated }}T00:00:00Z</updated>
   <link href="{{ site.url }}" rel="alternate" type="text/html" />
