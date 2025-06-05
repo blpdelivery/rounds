@@ -6,3 +6,7 @@ I tried to implement Jekyll Picture Tag (jpt), and I used GitHub Actions to depl
 
 
 TODO: test on various browsers (browserling) and make it work without js (esp. atom feed copier)
+
+
+## Minifiers
+In JS, don't put a lone quotation mark in strings, eg `"How're you, world"`.
