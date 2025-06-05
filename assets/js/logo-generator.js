@@ -1,3 +1,7 @@
+---
+layout: html_minifier
+---
+
 function randomInt(min, max) {
   const minCeiled = Math.ceil(min);
   return Math.floor(Math.random() * (Math.floor(max) - minCeiled + 1) + minCeiled);
