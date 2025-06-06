@@ -3,7 +3,7 @@ To use this include, add {%- include media.html post=post -%} in the site.data.p
 To make media urls absolute, use absolute=true attribute.
 {%- endcomment -%}
 
-{%- if include.post == data.posts | last -%}
+{%- if include.post == site.data.posts.last -%}
   {%- assign loading = "eager" -%}
   {%- else -%}
     {%- assign loading = "lazy" -%}
