@@ -3,6 +3,12 @@ To use this include, add {%- include media.html post=post -%} in the site.data.p
 To make media urls absolute, use absolute=true attribute.
 {%- endcomment -%}
 
+{%- if include.post == data.posts | last -%}
+  {%- assign loading = "eager" -%}
+  {%- else -%}
+    {%- assign loading = "lazy" -%}
+{%- endif -%}
+
 {%- for media_item in include.post.media -%}
   {%- assign media_type = media_item.type | split: "/" | first -%}
   {%- assign relative_media_url = "assets/media/" | append: post.number | append: media_item.url -%}
@@ -13,7 +19,7 @@ To make media urls absolute, use absolute=true attribute.
   {%- endif -%}
   {%- case media_type -%}
     {%- when "image" -%}
-      {%- picture jpt-webp "{{ media_url }}" --parent class="media-item" --img decoding="async" -%}
+      {%- picture jpt-webp "{{ media_url }}" --parent class="media-item" --img loading="{{ loading }}" decoding="async" -%}
     {%- when "video" -%}
       <video src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></video>
     {%- when "audio" -%}
