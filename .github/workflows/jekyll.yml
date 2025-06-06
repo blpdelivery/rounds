@@ -35,7 +35,7 @@ jobs:
       - name: Install JPT's dependency libvips
         run: sudo apt-get install libvips-tools
       - name: Install libvip's dependency libheif
-        run: sudo apt-get install libheif-dev
+        run: sudo add-apt-repository ppa:strukturag/libheif
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby
