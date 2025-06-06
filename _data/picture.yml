@@ -1,0 +1,12 @@
+media_queries:
+  mobile: "max-width: 300px"
+  regular_padding: "max-width: 50em"
+  extra-padding: "min-width: 50em"
+
+presets:
+  default:
+    widths: [300, 600, 900, 1200]
+    formats: [webp, jp2, original]
+    dimension_attributes: true
+    attributes:
+      img: 'decoding="async" class="media-item"'
