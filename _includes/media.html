@@ -9,11 +9,11 @@ To make media urls absolute, use absolute=true attribute.
   {%- if absolute -%}
     {%- assign media_url = relative_media_url | absolute_url -%}
     {%- else -%}
-    {%- assign media_url = relative_media_url -%}
+      {%- assign media_url = relative_media_url -%}
   {%- endif -%}
   {%- case media_type -%}
     {%- when "image" -%}
-      <img src="{{ media_url }}" loading="lazy" decoding="async" class="media-item"/>
+      {%- picture jpt-webp "{{ media_url }}" --parent class="media-item" --img loading="lazy" decoding="async" -%}
     {%- when "video" -%}
       <video src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></video>
     {%- when "audio" -%}
