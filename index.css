@@ -50,6 +50,20 @@ a, button {
   cursor: pointer;
 }
 
+a.text-btn {
+  text-decoration: none;
+}
+
+button.text-btn {
+  border: none;
+}
+
+.text-btn {
+  color: var(--c-txt);
+  background-color: var(--c-acc);
+  border-radius: 
+}
+
 .icon {
   color: inherit;
   background: none;
@@ -151,4 +165,16 @@ body:has(.img-preview[open]) {
 
 footer {
   text-align: center;
+}
+
+.site-noscript dialog {
+  border: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
