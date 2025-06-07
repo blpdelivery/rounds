@@ -63,6 +63,7 @@ button.text-btn {
 }
 
 .text-btn {
+  font: inherit;
   color: var(--c-txt);
   background-color: var(--c-acc);
 }
