@@ -6,7 +6,7 @@ media_queries:
 presets:
   default:
     widths: [300, 600, 900, 1200]
-    formats: [webp, jp2, original]
+    formats: [webp, original]
     dimension_attributes: true
     attributes:
       img: 'decoding="async" class="media-item"'
