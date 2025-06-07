@@ -177,3 +177,9 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+@media (scripting: none) or (scripting: innitial-only) {
+  #atom {
+    display: none;
+  }
+}
