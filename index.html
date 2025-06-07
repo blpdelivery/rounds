@@ -38,6 +38,14 @@
       <p>{{ site.description_html }}</p>
     </header>
     <main>
+      <noscript class="site-noscript">
+        <dialog open>
+          <h2>JavaScript is disabled</h2>
+          <p>JavaScript is disabled in your browser. Some features of this site may not work as expected.</p>
+          <form method="dialog"><button class="text-btn">Continue anyway</button></form>
+          <a href="https://enable-javascript.com" class="text-btn">Learn how to enable JavaScript</a>
+        </dialog>
+      </noscript>
       <div id="feed" class="feed" role="feed">
         {%- for post in site.data.posts reversed -%}
           <article id="{{ post.number }}">
