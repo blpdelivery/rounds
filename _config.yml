@@ -9,7 +9,6 @@ url: https://rounds.bermaguilocalpost.org
 plugins:
   - jekyll-minifier
 
-
 jekyll-minifier:
-  uglifier-args:
+  uglifier_args:
     harmony: true
