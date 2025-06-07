@@ -166,7 +166,7 @@ footer {
   text-align: center;
 }
 
-.site-noscript dialog {
+.site-noscript dialog[open] {
   border: none;
   position: fixed;
   top: 0;
