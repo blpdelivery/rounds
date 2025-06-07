@@ -64,8 +64,10 @@ button.text-btn {
 
 .text-btn {
   font: inherit;
-  color: var(--c-txt);
+  color: #fff;
   background-color: var(--c-acc);
+  margin-bottom: 0.5em;
+  padding: 1em;
 }
 
 .icon {
@@ -178,6 +180,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: var(--c-bg);
 }
 
 @media (scripting: none) or (scripting: innitial-only) {
