@@ -1,11 +1,15 @@
 media_queries:
   mobile: "max-width: 300px"
-  regular_padding: "max-width: 50em"
-  extra-padding: "min-width: 50em"
+  regular_margin: "max-width: 50em"
+  extra-margin: "min-width: 50em"
 
 presets:
   default:
     widths: [300, 600, 900, 1200]
+    sizes:
+      mobile: 300px
+      regular_margin: 50em
+      extra_margin: 50em
     formats: [webp, original]
     dimension_attributes: true
     attributes:
