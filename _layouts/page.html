@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="alternate" href="feed.xml" type="application/atom+xml">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="global.css">
+    {%- for style in page.styles -%}
+      <link rel="stylesheet" href="{{ style }}">
+    {%- endfor -%}
     <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
     <link rel="shortcut icon" href="favicon.ico" />
