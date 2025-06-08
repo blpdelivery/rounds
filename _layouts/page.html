@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="alternate" href="feed.xml" type="application/atom+xml">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/" id="logo" class="logo" aria-label="Home">
+        <svg viewBox="0 0 18 18">
+          <use href="assets/ui/icons.svg#static-logo"/>
+        </svg>
+      </a>
+      <button id="atom" class="icon">
+        <svg viewBox="0 0 16 16" width="16" height="16" role="img">
+          <title>Copy feed URL</title>
+          <use href="assets/ui/icons.svg#feed"/>
+        </svg>
+      </button>
+    </nav>
+    <header>
+      <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+      <p>{% if page.description %}{{ page.description }}{% else %}{{ site.description_html }}{% endif %}</p>
+    </header>
+    <main>
+      <noscript class="site-noscript">
+        <dialog open>
+          <h2>JavaScript is disabled</h2>
+          <p>JavaScript is disabled in your browser. Some features of this site may not work as expected.</p>
+          <form method="dialog"><button class="text-btn">Continue anyway</button></form>
+          <a href="https://enable-javascript.com" class="text-btn">Learn how to enable JavaScript</a>
+        </dialog>
+      </noscript>
+      {{ content }}
+    </main>
+    <footer>
+      <p><small>{{ site.copyright }}</small></p>
+    </footer>
+    <script src="assets/js/logo-generator.js"></script>
+    <script src="global.js"></script>
+    {%- for script in page.scripts -%}
+      <script src="{{ script }}"></script>
+    {%- endfor -%}
+  </body>
+</html>
