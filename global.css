@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Quicksand";
+  src:
+    local("Quicksand"),
+    url("assets/fonts/Quicksand.woff2") format("woff2"),
+    url("assets/fonts/Quicksand.woff") format("woff"),
+    url("assets/fonts/Quicksand.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --c-txt: #222;
+  --c-bg: #ffe;
+  --c-acc: #f36e32;
+  --logo-opacity: 0.3;
+  --logo-color: var(--c-acc);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --c-txt: #fff;
+    --c-bg: #222;
+  }
+}
+
+body {
+  color: var(--c-txt);
+  background-color: var(--c-bg);
+  max-width: 50em;
+  font-family: "Quicksand", ui-rounded, ui-sans-serif, sans-serif;
+  margin: 2em auto;
+  padding: 0 2em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    scroll-behavior: smooth;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  body {
+    padding: 0 1em;
+  }
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+a.text-btn {
+  text-decoration: none;
+}
+
+button.text-btn {
+  border: none;
+}
+
+.text-btn {
+  font: inherit;
+  color: #fff;
+  background-color: var(--c-acc);
+  margin-bottom: 0.5em;
+  padding: 1em;
+}
+
+.icon {
+  color: inherit;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon svg {
+  width: 2em;
+  height: 2em;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-gap: 0.5em;
+  align-items: center;
+}
+
+nav .logo svg {
+  width: 4em;
+}
+
+nav .logo {
+  color: var(--c-acc);
+  justify-self: left;
+}
+
+header {
+  text-align: center;
+  margin: 5em 0;
+}
