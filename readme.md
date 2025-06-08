@@ -1,4 +1,6 @@
 # BLP Rounds
 
-TODO: test on various browsers (browserling) and make it work without js (esp. atom feed copier)
-TODO: increase Lighthouse scores with JPT.
+TODO: enable avif for jpt
+TODO: test on various browsers (browserling)
+DONE: make it work without js
+DONE: increase Lighthouse scores with JPT.

@@ -11,4 +11,4 @@ plugins:
 
 jekyll-minifier:
   uglifier_args:
-    harmony: true
+    harmony: true # enables experimental ES6 minification
