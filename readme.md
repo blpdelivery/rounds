@@ -4,6 +4,7 @@
 - [Jekyll](https://jekyllrb.com/), deployed with [GitHub Pages](https://pages.github.com/)
 - [Jekyll Picture Tag](https://rbuchberger.github.io/jekyll_picture_tag)
 - [jekyll-minifier](https://github.com/digitalsparky/jekyll-minifier)
+- [Bootstrap Icons](https://icons.bootstrap.com)
 
 ## TODO
 - [ ] enable avif for jpt
