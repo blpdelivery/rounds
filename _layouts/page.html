@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="alternate" href="feed.xml" type="application/atom+xml">
-    <link rel="stylesheet" href="global.css">
+    <link rel="alternate" href="/feed.xml" type="application/atom+xml">
+    <link rel="stylesheet" href="/global.css">
     {%- for style in page.styles -%}
       <link rel="stylesheet" href="{{ style }}">
     {%- endfor -%}
-    <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon.png" />
-    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
 
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   </head>
@@ -22,13 +22,13 @@
     <nav>
       <a href="/" id="logo" class="logo" aria-label="Home">
         <svg viewBox="0 0 18 18">
-          <use href="assets/ui/icons.svg#static-logo"/>
+          <use href="/assets/ui/icons.svg#static-logo"/>
         </svg>
       </a>
       <button id="atom" class="icon">
         <svg viewBox="0 0 16 16" width="16" height="16" role="img">
           <title>Copy feed URL</title>
-          <use href="assets/ui/icons.svg#feed"/>
+          <use href="/assets/ui/icons.svg#feed"/>
         </svg>
       </button>
     </nav>
@@ -50,8 +50,8 @@
     <footer>
       <p><small>{{ site.copyright }}</small></p>
     </footer>
-    <script src="assets/js/logo-generator.js"></script>
-    <script src="global.js"></script>
+    <script src="/assets/js/logo-generator.js"></script>
+    <script src="/global.js"></script>
     {%- for script in page.scripts -%}
       <script src="{{ script }}"></script>
     {%- endfor -%}
