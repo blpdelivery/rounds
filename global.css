@@ -119,13 +119,13 @@ header {
   background-color: var(--c-bg);
 }
 
-@media (scripting: none) or (scripting: innitial-only) {
-  #atom {
-    display: none;
-  }
-}
-
 footer {
   margin-top: 3em;
   text-align: center;
+}
+
+@media (scripting: none), (scripting: innitial-only) {
+  #atom {
+    display: none;
+  }
 }
