@@ -17,6 +17,7 @@
 
 .feed .media-item {
   width: 100%;
+  height: auto;
 }
 
 .feed img.media-item {
