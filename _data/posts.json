@@ -15,14 +15,14 @@
   {
     "number": 17,
     "published": "2025-03-29",
-    "updated": "2025-06-01",
+    "updated": "2025-06-20",
     "media": [
       {
         "url": ".png",
         "type": "image/png"
       }
     ],
-    "description": "<p>Easter meerkats at Woolworths.</p>",
+    "description": "<p>Easter quokkas at Woolworths.</p>",
     "id": "tag:rounds.bermaguilocalpost.org,2025-03-29:17"
   },
   {
@@ -80,7 +80,7 @@
   {
     "number": 22,
     "published": "2025-05-30",
-    "updated": "2025-05-30",
+    "updated": "2025-06-20",
     "media": [
       {
         "url": "-a.jpeg",
@@ -91,7 +91,20 @@
         "type": "image/jpeg"
       }
     ],
-    "description": "<p>A purple flower</p>",
+    "description": "<p>A purple flower.</p>",
     "id": "tag:rounds.bermaguilocalpost.org,2025-05-30:22"
+  },
+  {
+    "number": 23,
+    "published": "2025-06-20",
+    "updated": "2025-06-20",
+    "media": [
+      {
+        "url": ".png",
+        "type": "image/png"
+      }
+    ],
+    "description": "<p>Campbells Cove mooring facility.</p>",
+    "id": "tag:rounds.bermaguilocalpost.org,2025-06-20:23"
   }
 ]
