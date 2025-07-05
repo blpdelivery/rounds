@@ -106,5 +106,18 @@
     ],
     "description": "<p>Campbells Cove mooring facility.</p>",
     "id": "tag:rounds.bermaguilocalpost.org,2025-06-20:23"
+  },
+  {
+    "number": 24,
+    "published": "2025-06-02",
+    "updated": "2025-06-02",
+    "media": [
+      {
+        "url": ".mp4",
+        "type": "video/mp4"
+      }
+    ],
+    "description": "<p>Rough seas at Blue Pool.</p>",
+    "id": "tag:rounds.bermaguilocalpost.org,2025-06-02:24"
   }
 ]
