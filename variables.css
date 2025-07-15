@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Quicksand";
+  src:
+    local("Quicksand"),
+    url("assets/fonts/Quicksand.woff2") format("woff2"),
+    url("assets/fonts/Quicksand.woff") format("woff"),
+    url("assets/fonts/Quicksand.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --c-txt: #222;
+  --c-bg: #ffe;
+  --c-acc: #f36e32;
+  --logo-opacity: 0.3;
+  --logo-color: var(--c-acc);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --c-txt: #fff;
+    --c-bg: #222;
+  }
+}
