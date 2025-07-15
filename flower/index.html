@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flower | BLP Rounds</title>
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <svg id="svg" class="svg" role="img" aria-label="A flower graphic which responds to user interaction">
+      <defs>
+        <ellipse id="master-petal" opacity="20%"/>
+      </defs>
+      <g id="petals"></g>
+    </svg>
+    <button popovertarget="more">More</button>
+    <aside id="more" popover>
+      <button popovertarget="more" popovertargetaction="close">Close</button>
+      <section id="help">
+        <h2>Help</h2>
+        <h3>Controls</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Control</th>
+              <th>Touch action</th>
+              <th>Mouse action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>petal size</th>
+              <td>touch and drag with one finger</td>
+              <td>move mouse</td>
+            </tr>
+            <tr>
+              <th>petal position</th>
+              <td>touch and drag with two fingers</td>
+              <td>click and drag</td>
+            </tr>
+            <tr>
+              <th>increment number of petals</th>
+              <td>-</td>
+              <td><kbd>↑</kbd> upwards arrow key</td>
+            </tr>
+            <tr>
+              <th>decrement number of petals</th>
+              <td>-</td>
+              <td><kbd>↓</kbd> downwards arrow key</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </aside>
+    
+    <!--<dialog id="capture">
+      <form method="dialog"><button>Close</button></form>
+      <img id="capture-img" alt="Your captured image">
+      <menu>
+        <li><a id="capture-download" download>Download</a></li>
+        <li><button id="capture-share">Share</button></li>
+      </menu>
+    </dialog>-->
+    <script src="script.js"></script>
+  </body>
+</html>
