@@ -12,8 +12,19 @@ imgPreviewClose.addEventListener("click", closeImgPreview);
 
 for (const mediaItem of document.querySelectorAll("img.media-item")) {
   mediaItem.addEventListener("error", () => mediaItem.src = "assets/ui/broken-img.svg");
-  mediaItem.addEventListener("click", () => {
-    imgPreviewImg.src = mediaItem.dataset.original;
+  mediaItem.addEventListener("click", async () => {
+    imgPreviewImg.src = mediaItem.src;
     imgPreview.show();
+    await fetch(img.dataset.original)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        
+        return response.blob();
+      })
+      .then(response => {
+        imgPreviewImg.src = URL.createObjectURL(response);
+      });
   });
 }
