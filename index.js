@@ -15,7 +15,7 @@ for (const mediaItem of document.querySelectorAll("img.media-item")) {
   mediaItem.addEventListener("click", async () => {
     imgPreviewImg.src = mediaItem.src;
     imgPreview.show();
-    await fetch(img.dataset.original)
+    await fetch(mediaItem.dataset.original)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
