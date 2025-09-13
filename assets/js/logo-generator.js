@@ -51,8 +51,8 @@ function drawFlower() {
 drawFlower();
 
 addEventListener("mousemove", (ev) => {
-  rx = ev.x;
-  ry = ev.y;
+  rx = ev.x / 6;
+  ry = ev.y / 8;
   drawFlower();
 });
 
