@@ -24,12 +24,11 @@ ellipse.setAttribute("fill", "var(--logo-color)");
 ellipse.setAttribute("opacity", "var(--logo-opacity)");
 ellipse.setAttribute("id", "ellipse");
 
-var count = randomInt(5, 7),
+let count = randomInt(5, 7),
   rx = randomNumber(3, 6),
-  ry = randomNumber(3, 8),
-  cy = -(8 - ry);
+  ry = randomNumber(3, 8);
 
-var copies = [];
+let copies = [];
 
 function drawFlower() {
   copies = [];
@@ -37,7 +36,7 @@ function drawFlower() {
   copies.push(ellipse);
   ellipse.setAttribute("rx", rx);
   ellipse.setAttribute("ry", ry);
-  ellipse.setAttribute("cy", cy);
+  ellipse.setAttribute("cy", -(8 - ry));
     
   for (let iteration = 1; iteration < count; iteration++) {
     const copy = document.createElementNS(ns, "use");
@@ -50,5 +49,11 @@ function drawFlower() {
 }
 
 drawFlower();
+
+addEventListener("mousemove", (ev) => {
+  rx = ev.x;
+  ry = ev.y;
+  drawFlower();
+});
 
 document.getElementById("logo").replaceChildren(svg);
