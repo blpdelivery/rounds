@@ -67,14 +67,12 @@ window.addEventListener("keydown", (ev) => {
     if (colorChange.length === 6) {
       color = "#" + colorChange;
       colorChange = false;
-      drawFlower();
     }
   }
   
   switch (ev.key) {
     case "+":
       count++;
-      drawFlower();
       break;
     case "-":
       count -= count === 1 ? 0 : 1;
@@ -83,6 +81,8 @@ window.addEventListener("keydown", (ev) => {
       colorChange = true;
       break;
   }
+
+  drawFlower();
 });
 
 document.getElementById("logo").replaceChildren(svg);
