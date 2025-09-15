@@ -50,4 +50,10 @@ function drawFlower() {
 
 drawFlower();
 
+window.addEventListener("mousemove", (ev) => {
+  rx = ev.x / (window.innerWidth / 6);
+  ry = ev.y / (window.innerHeight / 8);
+  drawFlower();
+});
+
 document.getElementById("logo").replaceChildren(svg);
