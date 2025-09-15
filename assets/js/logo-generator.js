@@ -53,8 +53,8 @@ function drawFlower() {
 drawFlower();
 
 window.addEventListener("mousemove", (ev) => {
-  rx = ev.x / (window.innerWidth / 6);
-  ry = ev.y / (window.innerHeight / 8);
+  rx = ev.x / (window.innerWidth / 3) + 3;
+  ry = ev.y / (window.innerHeight / 4) + 4;
   drawFlower();
 });
 
