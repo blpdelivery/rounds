@@ -67,6 +67,7 @@ window.addEventListener("keydown", (ev) => {
     if (colorChange.length === 6) {
       color = "#" + colorChange;
       colorChange = false;
+      drawFlower();
     }
   }
   
