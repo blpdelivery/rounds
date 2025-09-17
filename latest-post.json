@@ -1,4 +1,20 @@
 ---
 ---
 
-{{ site.data.posts.last }}
+{% assign post = site.data.posts.last %}
+
+{
+  "number": {{ post.number }},
+  "published": "{{ post.published }}",
+  "updated": "{{ post.updated }}",
+  "media": [
+    {%- for media in post.media -%} 
+      {
+        "url": "{{ media.url }}",
+        "type": "{{ media.type }}"
+      }
+    {%- endfor -%}
+  ],
+  "description": "{{ post.description }}",
+  "id": "{{ post.id }}"
+}
