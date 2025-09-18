@@ -14,4 +14,4 @@ jekyll-minifier:
     harmony: true # enables experimental ES6 minification
 
 favicon:
-  source: assets/favicons/favicon.svg
+  source: /assets/favicons/favicon.svg
