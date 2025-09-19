@@ -145,5 +145,18 @@
     ],
     "description": "<p>A photo sphere near Cowrie Beach.</p>",
     "id": "tag:rounds.bermaguilocalpost.org,2025-09-14:26"
+  },
+  {
+    "number": 27,
+    "published": "2025-09-19",
+    "updated": "2025-09-19",
+    "media": [
+      {
+        "url": ".jpeg",
+        "type": "image/jpeg"
+      }
+    ],
+    "description": "<p>Gulaga, seen from <del>Bruce Steer</del> Pool.</p>",
+    "id": "tag:rounds.bermaguilocalpost.org,2025-09-19:27"
   }
 ]
