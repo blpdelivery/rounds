@@ -11,7 +11,6 @@
     {%- for style in page.styles -%}
       <link rel="stylesheet" href="{{ style }}">
     {%- endfor -%}
-    {% favicon %}
 
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   </head>
@@ -47,6 +46,7 @@
     {%- endfor -%}
   </body>
 </html>
+
 
 
 
