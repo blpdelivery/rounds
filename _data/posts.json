@@ -158,5 +158,22 @@
     ],
     "description": "<p>Gulaga, seen from <del>Bruce Steer</del> Pool.</p>",
     "id": "tag:rounds.bermaguilocalpost.org,2025-09-19:27"
+  },
+  {
+    "number": 28,
+    "published": "2025-09-20",
+    "updated": "2025-09-20",
+    "media": [
+      {
+        "url": "-a.jpeg",
+        "type": "image/jpeg"
+      },
+      {
+        "url": "-b.jpeg",
+        "type": "image/jpeg"
+      }
+    ],
+    "description": "<p>Macro photographs of sea lettuce.</p>",
+    "id": "tag:rounds.bermaguilocalpost.org,2025-09-20:28"
   }
 ]
