@@ -19,7 +19,13 @@ To make media urls absolute, use absolute=true attribute.
   {%- endif -%}
   {%- case media_type -%}
     {%- when "image" -%}
-      {%- picture jpt-webp "{{ media_url }}" --img class="media-item" loading="{{ loading }}" decoding="async" data-original="{{ media_url }}" -%}
+      {%- if media_item.photo_sphere -%}
+        <div class="media-item photo-sphere" data-src="{{ media_url }}">
+          {%- picture jpt-webp "{{ media_url }}" --img class="media-item" loading="{{ loading }}" decoding="async" data-original="{{ media_url }}" -%}
+        </div>
+      {%- else -%}
+        {%- picture jpt-webp "{{ media_url }}" --img class="media-item" loading="{{ loading }}" decoding="async" data-original="{{ media_url }}" -%}
+      {%- endif -%}
     {%- when "video" -%}
       <video src="{{ media_url }}" controls controlslist="nodownload" loop class="media-item"></video>
     {%- when "audio" -%}
