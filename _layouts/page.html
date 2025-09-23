@@ -40,13 +40,18 @@
     <footer>
       <p><small>{{ site.copyright }}</small></p>
     </footer>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+          "@photo-sphere-viewer/core": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.module.js",
+          "@photo-sphere-viewer/cubemap-adapter": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/cubemap-adapter/index.module.js"
+        }
+      }
+    </script>
     <script src="/assets/js/logo-generator.js"></script>
     {%- for script in page.scripts -%}
       <script src="{{ script }}"></script>
     {%- endfor -%}
   </body>
 </html>
-
-
-
-
