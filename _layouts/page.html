@@ -52,8 +52,13 @@
     <script src="/assets/js/photo-spheres.mjs" type="module"></script>
     <script src="/assets/js/logo-generator.js"></script>
     {%- for script in page.scripts -%}
-      <script src="{{ script }}"></script>
+      {%- if (script | split: "." | last) == "mjs" -%}
+        <script src="{{ script }}" type="module"></script>
+      {%- else -%}
+        <script src="{{ script }}"></script>
+      {%- endif -%}
     {%- endfor -%}
   </body>
 </html>
+
 
