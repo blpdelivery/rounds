@@ -140,7 +140,7 @@
     "media": [
       {
         "url": ".jpeg",
-        "type": "image.jpeg",
+        "type": "image/jpeg",
         "photo_sphere": true
       }
     ],
