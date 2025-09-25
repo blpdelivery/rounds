@@ -7,7 +7,8 @@
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 
 ## TODO
-- [ ] enable avif for jpt
+- [ ] transfer to Astro
+- [ ] ~enable avif for jpt~
 - [ ] test on various browsers (browserling)
 - [x] make it work without js
 - [x] increase Lighthouse scores with JPT.
