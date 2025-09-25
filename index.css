@@ -24,6 +24,11 @@
   cursor: zoom-in;
 }
 
+.feed .media-item.photo-sphere {
+  height: 200px;
+  height: 80vh;
+}
+
 .img-preview[open] {
   border: none;
   background-color: #000a;
