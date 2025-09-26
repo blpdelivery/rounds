@@ -1,4 +1,4 @@
 ---
 ---
 {% for post in site.data.posts %}
-{{ post.number -}}{{- post.last.url }}{% endfor %}
+{{ post.number -}}{{- post.media.last.url }}{% endfor %}
