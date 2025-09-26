@@ -176,5 +176,26 @@
     ],
     "description": "<p>Macro photographs of sea lettuce.</p>",
     "id": "tag:rounds.bermaguilocalpost.org,2025-09-20:28"
+  },
+  {
+    "number": 29,
+    "published": "2025-09-26",
+    "updated": "2025-09-26",
+    "media": [
+      {
+        "url": "-a.jpeg",
+        "type": "image/jpeg"
+      },
+      {
+        "url": "-b.jpeg",
+        "type": "image/jpeg"
+      },
+      {
+        "url": "-c.jpeg",
+        "type": "image/jpeg"
+      }
+    ],
+    "description": "<p>A Common Bluetail Dragonfly (<i>Ischnura heterosticta</i>) amongst garden nasturtiums.</p>",
+    "id": "tag:rounds.bermaguilocalpost.org,2025-09-26:29"
   }
 ]
