@@ -1,0 +1,5 @@
+---
+---
+
+{% for post in site.data.posts %}
+{{"/assets/media/" + post.media.last.url | absolute_url}}{% endfor %}

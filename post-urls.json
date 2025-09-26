@@ -1,8 +1,0 @@
----
----
-
-[
-  {% for post in site.data.posts %}
-    "{{post.media.last.url}}",
-  {% endfor %}
-]
