@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="en-AU">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flower | BLP Rounds</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <noscript>
-  <dialog id="javascript-warning" class="warning" open>
-    <h2>JavaScript is disabled</h2>
-    <p>This app requires JavaScript to function properly. Please enable JavaScript to continue.</p>
-    <a href="https://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">Learn how</a>
-    <form method="dialog">
-      <button>Continue anyway</button>
-    </form>
-  </dialog>
-</noscript>
-<dialog id="motion-warning" class="warning" open>
-  <h2>Motion warning</h2>
-  <p>You have set your preferences to reduce motion. This app contains a moving graphic which may negatively affect users with vestibular motion disorders.</p>
-  <form method="dialog">
-    <button>Continue anyway</button>
-  </form>
-</dialog>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Flower | BLP Rounds</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<noscript>
+			<dialog id="javascript-warning" class="warning" open>
+				<h2>JavaScript is disabled</h2>
+				<p>This app requires JavaScript to function properly. Please enable JavaScript to continue.</p>
+				<a href="https://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">Learn how</a>
+				<form method="dialog">
+					<button>Continue anyway</button>
+				</form>
+			</dialog>
+		</noscript>
+		<dialog id="motion-warning" class="warning" open>
+			<h2>Motion warning</h2>
+			<p>You have set your preferences to reduce motion. This app contains a moving graphic which may negatively affect users with vestibular motion disorders.</p>
+			<form method="dialog">
+				<button>Continue anyway</button>
+			</form>
+		</dialog>
 
-<svg id="flower" role="img" aria-label="A flower graphic which responds to user interaction">
-  <defs>
-    <ellipse id="master-petal" fill="var(--accent)" opacity="0.2"></ellipse>
-  </defs>
-  <g id="petals"></g>
-</svg>
+		<svg id="flower" role="img" aria-label="A flower graphic which responds to user interaction">
+			<defs>
+				<ellipse id="master-petal" fill="var(--accent)" opacity="0.2"></ellipse>
+			</defs>
+			<g id="petals"></g>
+		</svg>
 
-<a id="home" class="control" href="/" aria-label="Back to BLP Rounds">←</a>
-<button id="helpOpen" class="control" popovertarget="help" aria-label="Help">?</button>
-<button id="addPetal" class="control" aria-label="Add petal">+</button>
-<button id="subtractPetal" class="control" aria-label="Remove petal">−</button>
+		<a id="home" class="control" href="/" aria-label="Back to BLP Rounds">←</a>
+		<button id="helpOpen" class="control" popovertarget="help" aria-label="Help">?</button>
+		<button id="addPetal" class="control" aria-label="Add petal">+</button>
+		<button id="subtractPetal" class="control" aria-label="Remove petal">−</button>
 
-<aside id="help" popover>
-  <h2>Help</h2>
-  <section>
-    <h3>Touch devices</h3>
-    <p>Drag with one finger to change the size of the petals, or with two fingers to change their position.</p>
-  </section>
-  <section>
-    <h3>Desktop devices</h3>
-    <p>Simply move the mouse over the flower to change the petals' size. Click and drag to change their positions.</p>
-  </section>
-</aside>
-    <script src="script.js"></script>
-  </body>
+		<aside id="help" popover>
+			<h2>Help</h2>
+			<section>
+				<h3>Touch devices</h3>
+				<p>Drag with one finger to change the size of the petals, or with two fingers to change their position.</p>
+			</section>
+			<section>
+				<h3>Desktop devices</h3>
+				<p>Simply move the mouse over the flower to change the petals' size. Click and drag to change their positions.</p>
+			</section>
+		</aside>
+		<script src="script.js"></script>
+	</body>
 </html>
