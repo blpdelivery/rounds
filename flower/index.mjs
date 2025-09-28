@@ -1,4 +1,4 @@
-import { $, $all, setAttributes, vw, vh, vmin } from "/helpers.mjs";
+import { $, $all, setAttributes, vw, vh, vmin } from "helpers.mjs";
 
 const flower = $("#flower"),
   masterPetal = $("#master-petal"),
