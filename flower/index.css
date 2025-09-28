@@ -1,0 +1,87 @@
+html {
+  color-scheme: light dark;
+  touch-action: none;
+  --accent: #f36e32;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  font: 1rem system-ui, sans-serif;
+}
+
+/* controls */
+.control {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 1rem;
+  --bg-transparency: 95%;
+  background: color-mix(in srgb, transparent var(--bg-transparency), CanvasText);
+  backdrop-filter: blur(1rem);
+  color: CanvasText;
+  font: inherit;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover, &:focus, &:active {
+    --bg-transparency: 80%;
+  }
+}
+#home {
+  left: 0;
+  top: 0;
+}
+#helpOpen {
+  left: 0;
+  bottom: 0;
+}
+#addPetal {
+  right: 0;
+  top: 0;
+}
+#subtractPetal {
+  right: 0;
+  bottom: 0;
+}
+
+/* warnings */
+.warning[open] {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 100%;
+  height: 100%;
+  h2 {
+    text-align: center;
+  }
+  a, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    text-decoration: underline;
+  }
+  h2, p, a, button {
+    max-width: 30rem;
+    margin: 1rem auto;
+    padding: 0 2rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  #motion-warning[open] {
+    display: none;
+  }
+}
