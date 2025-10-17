@@ -210,6 +210,10 @@
       {
         "url": "-b.jpeg",
         "type": "image/jpeg"
+      },
+      {
+        "url": "-c.jpeg",
+        "type": "image/jpeg"
       }
     ],
     "description": "<p>Live composite photos of the M2 CityLink freeway seen from the Brentwood Avenue overpass, Melbourne.</p>",
