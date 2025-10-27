@@ -218,5 +218,26 @@
     ],
     "description": "<p>Live composite photos of the M2 CityLink freeway seen from the Brentwood Avenue overpass, Melbourne.</p>",
     "id": "tag:rounds.bermaguilocalpost.org,2025-10-16:30"
+  },
+  {
+    "number": 31,
+    "published": "2025-10-26",
+    "updated": "2025-10-26",
+    "media": [
+      {
+        "url": "-a.jpeg",
+        "type": "image/jpeg"
+      },
+      {
+        "url": "-b.jpeg",
+        "type": "image/jpeg"
+      },
+      {
+        "url": "-c.jpeg",
+        "type": "image/jpeg"
+      }
+    ],
+    "description": "<p>Two varieties of pigface (genus <i>Carpobrotus</i>)</p>",
+    "id": "tag:rounds.bermaguilocalpost.org,2025-10-26:31"
   }
 ]
