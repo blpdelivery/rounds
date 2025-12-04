@@ -239,5 +239,18 @@
     ],
     "description": "<p>Two varieties of pigface (genus <i>Carpobrotus</i>)</p>",
     "id": "tag:rounds.bermaguilocalpost.org,2025-10-26:31"
+  },
+  {
+    "number": 32,
+    "published": "2025-11-28",
+    "updated": "2025-11-28",
+    "media": [
+      {
+        "url": ".jpeg",
+        "type": "image/jpeg"
+      }
+    ],
+    "description": "<p>A fallen tree after a windstorm.</p>",
+    "id": "tag:rounds.bermaguilocalpost.org,2025-11-28:32"
   }
 ]
